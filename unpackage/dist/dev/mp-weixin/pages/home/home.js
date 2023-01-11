@@ -1,8 +1,15 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 const store_home = require("../../store/home.js");
+if (!Array) {
+  const _easycom_uni_grid_item2 = common_vendor.resolveComponent("uni-grid-item");
+  const _easycom_uni_grid2 = common_vendor.resolveComponent("uni-grid");
+  (_easycom_uni_grid_item2 + _easycom_uni_grid2)();
+}
+const _easycom_uni_grid_item = () => "../../uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.js";
+const _easycom_uni_grid = () => "../../uni_modules/uni-grid/components/uni-grid/uni-grid.js";
 if (!Math) {
-  HomeBanner();
+  (HomeBanner + _easycom_uni_grid_item + _easycom_uni_grid)();
 }
 const HomeBanner = () => "./cpns/home-banner.js";
 const _sfc_main = {
@@ -12,7 +19,11 @@ const _sfc_main = {
     common_vendor.onLoad(() => {
     });
     return (_ctx, _cache) => {
-      return {};
+      return {
+        a: common_vendor.p({
+          column: 2
+        })
+      };
     };
   }
 };

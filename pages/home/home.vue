@@ -3,6 +3,22 @@
 
 		<!-- 轮播图组件 -->
 		<HomeBanner></HomeBanner>
+
+		<!-- 四个图片展示 -->
+		<uni-grid :column="2">
+			<uni-grid-item>
+				<image src="../../static/images/home/img1.png" mode="heightFix"></image>
+			</uni-grid-item>
+			<uni-grid-item>
+				<image src="../../static/images/home/img10.png" mode="heightFix"></image>
+			</uni-grid-item>
+			<uni-grid-item>
+				<image src="../../static/images/home/img7.png" mode="heightFix"></image>
+			</uni-grid-item>
+			<uni-grid-item>
+				<image class="img4" src="../../static/images/home/img4.png" mode="heightFix"></image>
+			</uni-grid-item>
+		</uni-grid>
 	</view>
 </template>
 
@@ -32,5 +48,7 @@
 </script>
 
 <style lang="scss">
-
+	.img4 {
+		margin-left: 120rpx;
+	}
 </style>
