@@ -1,0 +1,12 @@
+$gPrimaryColor: #B0EC64;
+$gTintColor: #B0EC64;
+
+$gPriceColor:#B0EC64;
+$gNormalColor: #666;
+
+$gBgColor:#f2f2f2;
+@mixin normalFlex($direction: row, $justify: space-between) {
+	display: flex;
+	justify-content: $justify;
+	flex-direction: $direction;
+}

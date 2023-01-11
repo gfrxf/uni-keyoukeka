@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/daka/daka",
+    "pages/social/social",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "可有科卡",
+    "navigationBarBackgroundColor": "#B0EC64",
+    "backgroundColor": "#B0EC64"
+  },
+  "tabBar": {
+    "selectedColor": "#B0EC64",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/images/tabbar/home.png",
+        "selectedIconPath": "static/images/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/daka/daka",
+        "text": "打卡",
+        "iconPath": "static/images/tabbar/daka.png",
+        "selectedIconPath": "static/images/tabbar/daka_active.png"
+      },
+      {
+        "pagePath": "pages/social/social",
+        "text": "社交",
+        "iconPath": "static/images/tabbar/social.png",
+        "selectedIconPath": "static/images/tabbar/social_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "static/images/tabbar/mine.png",
+        "selectedIconPath": "static/images/tabbar/wode_active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

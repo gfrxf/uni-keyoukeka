@@ -1,6 +1,10 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 const store_home = require("../../store/home.js");
+if (!Math) {
+  HomeBanner();
+}
+const HomeBanner = () => "./cpns/home-banner.js";
 const _sfc_main = {
   __name: "home",
   setup(__props) {

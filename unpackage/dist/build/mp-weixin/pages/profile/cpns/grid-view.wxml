@@ -1,0 +1,1 @@
+<view class="grid-view"><block wx:for="{{a}}" wx:for-item="item" wx:key="d"><view class="item"><view class="number"><text class="price">{{item.a}}</text><text>{{item.b}}</text></view><view class="name">{{item.c}}</view></view></block></view>

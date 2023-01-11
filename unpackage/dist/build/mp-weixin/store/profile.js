@@ -1,0 +1,1 @@
+"use strict";const e=require("../common/vendor.js").defineStore("profile",{state:()=>({nickName:"",avatarUrl:"",openid:""}),actions:{setnickName(e){this.nickName=e,console.log(this.nickName,"nicname")},setavatarUrl(e){this.avatarUrl=e,console.log(this.avatarUrl,"avatar")},setopenid(e){this.openid=e,console.log(this.openid,"storeopenid")}}});exports.useProfileStore=e;

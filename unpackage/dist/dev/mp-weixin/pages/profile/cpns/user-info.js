@@ -13,15 +13,14 @@ const _sfc_main = {
     const avatarUrl = common_vendor.ref("");
     const openid = common_vendor.ref("");
     avatarUrl.value = common_assets.touxiang;
-    common_vendor.onMounted(() => {
+    common_vendor.onBeforeMount(() => {
+      console.log("onmountes");
       openid.value = common_vendor.index.getStorageSync("openid") || "";
       console.log(openid.value, "openid");
       if (openid.value) {
         nickName.value = common_vendor.index.getStorageSync("nickName");
         avatarUrl.value = common_vendor.index.getStorageSync("avatarUrl");
         isLogin.value = true;
-      } else {
-        handleClick();
       }
     });
     async function handleClick() {

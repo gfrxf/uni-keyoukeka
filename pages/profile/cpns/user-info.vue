@@ -48,16 +48,14 @@
 	avatarUrl.value = touxiang
 	
 	// 页面加载时判断用户是否之前登陆过
-	 onMounted(() =>{
-		 // console.log('onmountes');
+	 onBeforeMount(() =>{
+		 console.log('onmountes');
 		openid.value = uni.getStorageSync("openid") || ""
 		console.log(openid.value,'openid');
 		if(openid.value){
 			nickName.value = uni.getStorageSync("nickName")
 			avatarUrl.value = uni.getStorageSync("avatarUrl")
 			isLogin.value = true
-		}else{
-			 handleClick()
 		}
 	})
 	// 登录

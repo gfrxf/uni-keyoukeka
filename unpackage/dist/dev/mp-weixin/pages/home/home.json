@@ -1,4 +1,6 @@
 {
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "home-banner": "./cpns/home-banner"
+  }
 }

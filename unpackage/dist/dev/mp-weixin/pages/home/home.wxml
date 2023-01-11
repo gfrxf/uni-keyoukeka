@@ -1,1 +1,1 @@
-<view> home </view>
+<view class="home"><home-banner u-i="0bd640e0-0" bind:__l="__l"></home-banner></view>

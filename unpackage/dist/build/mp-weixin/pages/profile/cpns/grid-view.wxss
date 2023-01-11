@@ -1,0 +1,1 @@
+.grid-view{display:flex;justify-content:space-between;flex-direction:row}.grid-view .item{padding:36rpx;flex:1}.grid-view .item .number{text-align:center;color:#666;font-size:26rpx}.grid-view .item .price{font-size:48rpx;font-weight:700;color:#b0ec64}.grid-view .item .name{text-align:center;color:#666}.grid-view .item+.item{border-left:1rpx solid #f2f2f2}

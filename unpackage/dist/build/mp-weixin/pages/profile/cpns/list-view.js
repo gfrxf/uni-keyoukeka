@@ -1,0 +1,1 @@
+"use strict";const t=require("../../../common/vendor.js"),e={props:{listItems:{type:Array,default:function(){return[]}}},setup:()=>({url:"http://localhost:8080/img/home.7210ddcb.svg"})};const o=t._export_sfc(e,[["render",function(e,o,r,n,s,c){return{a:t.f(r.listItems,((e,o,r)=>({a:e.icon,b:t.t(e.info),c:o})))}}]]);wx.createComponent(o);

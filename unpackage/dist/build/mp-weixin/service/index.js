@@ -1,0 +1,1 @@
+"use strict";const e=require("../common/vendor.js");const t=new class{request(t,s,r){return new Promise(((u,o)=>{e.index.request({url:"http://localhost:8080"+t,timeout:1e4,method:s||"GET",data:r,success:e=>{u(e.data)},fail(e){o(e)}})}))}get(e,t){return this.request(e,"GET",t)}post(e,t){return this.request(e,"POST",t)}};exports.DxRequest=t;

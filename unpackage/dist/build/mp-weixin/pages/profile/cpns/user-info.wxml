@@ -1,0 +1,1 @@
+<view class="user-info" bindtap="{{f}}"><view class="user-icon"><image class="avatar" src="{{a}}"></image></view><view class="login-info"><view wx:if="{{b}}" class="name"><button type="primary" bindtap="{{c}}" class="login">登录</button></view><view wx:if="{{d}}" class="userinfo"><text class="nickname">{{e}}</text></view></view></view>
