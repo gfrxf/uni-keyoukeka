@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "user-info": "./cpns/user-info",
+    "grid-view": "./cpns/grid-view",
+    "list-view": "./cpns/list-view"
+  }
+}
