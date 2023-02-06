@@ -2,26 +2,27 @@
 const common_vendor = require("../../common/vendor.js");
 const store_home = require("../../store/home.js");
 if (!Array) {
-  const _easycom_uni_grid_item2 = common_vendor.resolveComponent("uni-grid-item");
-  const _easycom_uni_grid2 = common_vendor.resolveComponent("uni-grid");
-  (_easycom_uni_grid_item2 + _easycom_uni_grid2)();
+  const _easycom_tab_control2 = common_vendor.resolveComponent("tab-control");
+  _easycom_tab_control2();
 }
-const _easycom_uni_grid_item = () => "../../uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.js";
-const _easycom_uni_grid = () => "../../uni_modules/uni-grid/components/uni-grid/uni-grid.js";
+const _easycom_tab_control = () => "../../components/tab-control/tab-control.js";
 if (!Math) {
-  (HomeBanner + _easycom_uni_grid_item + _easycom_uni_grid)();
+  _easycom_tab_control();
 }
-const HomeBanner = () => "./cpns/home-banner.js";
 const _sfc_main = {
   __name: "home",
   setup(__props) {
     store_home.useHomeStore();
     common_vendor.onLoad(() => {
     });
+    function handleTabItemClick(index) {
+      console.log(index);
+    }
     return (_ctx, _cache) => {
       return {
-        a: common_vendor.p({
-          column: 2
+        a: common_vendor.o(handleTabItemClick),
+        b: common_vendor.p({
+          titles: ["\u6211\u7684", "\u5168\u90E8"]
         })
       };
     };

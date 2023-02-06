@@ -14,18 +14,24 @@
 /* 水平间距 */
 /* 颜色变量 */
 /* 行为相关颜色 */
-.uni-grid-wrap.data-v-07acefee {
+.tab-cntrol {
+  padding: 10rpx;
+  margin-top: 10rpx;
+  text-align: center;
   display: flex;
+  justify-content: space-between;
+}
+.tab-cntrol .item {
   flex: 1;
-  flex-direction: column;
+  text-align: center;
+  border: 1px solid #B0EC64;
 }
-.uni-grid.data-v-07acefee {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.tab-cntrol .item .title {
+  display: inline-block;
+  padding: 16rpx;
+  border-bottom: 6rpx solid #fff;
 }
-.uni-grid--border.data-v-07acefee {
-  position: relative;
-  z-index: 1;
-  border-left: 1px #D2D2D2 solid;
+.tab-cntrol .item.active .title {
+  color: #B0EC64;
+  border-bottom: 6rpx solid #B0EC64;
 }

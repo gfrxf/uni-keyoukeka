@@ -28,7 +28,7 @@
 
 	.swiper {
 		height: 346rpx;
-		margin-top: -1.5rpx;
+		margin-top: -1.5årpx;
 
 
 	}
