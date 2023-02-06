@@ -6,6 +6,7 @@ if (!Math) {
   "./pages/daka/daka.js";
   "./pages/social/social.js";
   "./pages/profile/profile.js";
+  "./pages/detail/detail.js";
 }
 const _sfc_main = {
   onLaunch: function() {

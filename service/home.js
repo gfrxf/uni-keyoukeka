@@ -1,7 +1,26 @@
 import DxRequest from './index.js'
 
-export const getHomeMutidata =  () =>{
+export const getHomeMutidata = () => {
 	return DxRequest.get('/home/multidata', {})
+}
+
+export const getMyData = (openId) => {
+	return DxRequest.get('/article/list', {
+		openId
+	})
+
+}
+
+export const getAllData = () => {
+	return DxRequest.get('/article/list', {
+
+	})
+}
+
+export const getDetails = (id) => {
+	return DxRequest.get('/article/detail', {
+		id
+	})
 }
 
 // import hyRequest from './index.js'

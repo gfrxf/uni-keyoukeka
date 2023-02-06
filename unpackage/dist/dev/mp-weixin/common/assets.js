@@ -2,7 +2,15 @@
 const messagePNG = "/static/images/profile/message.png";
 const appPNG = "/static/images/profile/mall.png";
 const vipPNG = "/static/images/profile/shoucang.png";
+const _imports_0$1 = "/static/images/home/favor.png";
+const _imports_0 = "/static/images/home/1.png";
+const _imports_1 = "/static/images/home/2.png";
+const _imports_2 = "/static/images/home/3.png";
 const touxiang = "/static/images/profile/avatar-default.png";
+exports._imports_0 = _imports_0$1;
+exports._imports_0$1 = _imports_0;
+exports._imports_1 = _imports_1;
+exports._imports_2 = _imports_2;
 exports.appPNG = appPNG;
 exports.messagePNG = messagePNG;
 exports.touxiang = touxiang;

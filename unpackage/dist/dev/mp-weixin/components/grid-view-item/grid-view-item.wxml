@@ -1,0 +1,1 @@
+<view class="goods-item" bindtap="{{e}}"><image class="image" lazy-load="{{true}}" src="{{a}}" mode=""></image><view class="desc-info"><view class="title">{{b}}</view><view class="info"><image class="icon" lazy-load="{{true}}" src="{{c}}" mode=""></image><label>收藏数：{{d}}</label></view></view></view>

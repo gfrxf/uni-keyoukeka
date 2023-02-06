@@ -1,6 +1,10 @@
 {
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "tab-control": "../../components/tab-control/tab-control"
+    "uni-grid-item": "../../uni_modules/uni-grid/components/uni-grid-item/uni-grid-item",
+    "uni-grid": "../../uni_modules/uni-grid/components/uni-grid/uni-grid",
+    "tab-control": "../../components/tab-control/tab-control",
+    "grid-view-item": "../../components/grid-view-item/grid-view-item",
+    "home-banner": "./cpns/home-banner"
   }
 }

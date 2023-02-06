@@ -2,10 +2,10 @@
 	<view class="home">
 
 		<!-- 轮播图组件 -->
-		<!-- <HomeBanner></HomeBanner> -->
+		<HomeBanner></HomeBanner>
 
 		<!-- 四个图片展示 -->
-		<!-- 		<uni-grid :column="2">
+		<uni-grid :column="2">
 			<uni-grid-item>
 				<image src="../../static/images/home/img1.png" mode="heightFix"></image>
 			</uni-grid-item>
@@ -18,12 +18,26 @@
 			<uni-grid-item>
 				<image class="img4" src="../../static/images/home/img4.png" mode="heightFix"></image>
 			</uni-grid-item>
-		</uni-grid> -->
+		</uni-grid>
 
 		<!-- 选项卡组件 -->
 		<tab-control :titles="['我的','全部']" @tabItemClick="handleTabItemClick"></tab-control>
-
-
+		<!-- 我的 -->
+		<uni-grid v-if=!current :column="2" :square="false" borderColor="#B0EC64">
+			<template v-for="(itemInfo,index) in mydata" :key="index">
+				<uni-grid-item>
+					<grid-view-item :itemInfo="itemInfo" @itemClick="handleGridItemClick"></grid-view-item>
+				</uni-grid-item>
+			</template>
+		</uni-grid>
+		<!-- 全部 -->
+		<uni-grid v-if=current :column="2" :square="false" borderColor="#B0EC64">
+			<template v-for="(itemInfo,index) in alldata" :key="index">
+				<uni-grid-item>
+					<grid-view-item :itemInfo="itemInfo" @itemClick="handleGridItemClick"></grid-view-item>
+				</uni-grid-item>
+			</template>
+		</uni-grid>
 	</view>
 </template>
 
@@ -39,21 +53,43 @@
 		storeToRefs
 	} from 'pinia'
 	import {
-		useHomeStore
+		useHomeStore,
+
 	} from '@/store/home.js'
+	import {
+		ref
+	} from 'vue'
 
-
-
+	const current = ref(0)
 	const homeStore = useHomeStore()
+	const {
+		mydata,
+		alldata
+	} = storeToRefs(homeStore)
 	onLoad(() => {
-		// console.log('load111');
-		// homeStore.fetchHomeMultidata()
-
+		const openId = uni.getStorageSync("openid")
+		// console.log(openId, 'openid');
+		homeStore.fetchMyData(openId) //获取首页疾病列表数据
+		homeStore.fetchAllData() //获取首页全部数据
+		console.log(mydata);
 	})
 
 	// tab-control的点击事件,0代表我的。1代表全部
 	function handleTabItemClick(index) {
-		console.log(index);
+		current.value = index
+		console.log(current.value, 'current');
+	}
+
+	//  grid-view-item 的点击事件（会跳转到详情页面）
+	function handleGridItemClick(itemInfo) {
+		uni.$emit('send', {
+			tagId: itemInfo.tagId,
+			content: itemInfo.content
+		})
+		uni.navigateTo({
+			url: '/pages/detail/detail?tagId=' + itemInfo.tagId
+
+		})
 
 	}
 </script>

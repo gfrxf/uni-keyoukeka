@@ -3,7 +3,8 @@
     "pages/home/home",
     "pages/daka/daka",
     "pages/social/social",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/detail/detail"
   ],
   "window": {
     "navigationBarTextStyle": "white",
