@@ -30,6 +30,7 @@ export const useHomeStore = defineStore('home', {
 		async fetchMyData(openId) {
 			const res = await getMyData(openId)
 			this.mydata = res.data || []
+			// this.mydata = []
 			// console.log(res, 'my');
 			console.log(this.mydata);
 		},

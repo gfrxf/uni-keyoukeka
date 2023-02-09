@@ -1,1 +1,1 @@
-<rich-text></rich-text>
+<rich-text class="content" nodes="{{a}}"></rich-text>

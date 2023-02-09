@@ -14,7 +14,7 @@
 /* 水平间距 */
 /* 颜色变量 */
 /* 行为相关颜色 */
-.text {
+.content {
   width: 100vw;
   height: 100vh;
 }

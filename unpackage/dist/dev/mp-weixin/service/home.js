@@ -8,5 +8,11 @@ const getMyData = (openId) => {
 const getAllData = () => {
   return service_index.DxRequest.get("/article/list", {});
 };
+const getDetails = (id) => {
+  return service_index.DxRequest.get("/article/detail", {
+    id
+  });
+};
 exports.getAllData = getAllData;
+exports.getDetails = getDetails;
 exports.getMyData = getMyData;

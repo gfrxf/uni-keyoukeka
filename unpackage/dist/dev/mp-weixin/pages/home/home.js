@@ -31,11 +31,9 @@ const _sfc_main = {
       const openId = common_vendor.index.getStorageSync("openid");
       homeStore.fetchMyData(openId);
       homeStore.fetchAllData();
-      console.log(mydata);
     });
     function handleTabItemClick(index) {
       current.value = index;
-      console.log(current.value, "current");
     }
     function handleGridItemClick(itemInfo) {
       common_vendor.index.$emit("send", {

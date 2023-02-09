@@ -57,8 +57,12 @@
 
 	} from '@/store/home.js'
 	import {
-		ref
+		ref,
+		toRaw
 	} from 'vue'
+	import {
+		createLogger
+	} from 'vuex'
 
 	const current = ref(0)
 	const homeStore = useHomeStore()
@@ -66,18 +70,29 @@
 		mydata,
 		alldata
 	} = storeToRefs(homeStore)
+
+
 	onLoad(() => {
 		const openId = uni.getStorageSync("openid")
 		// console.log(openId, 'openid');
 		homeStore.fetchMyData(openId) //获取首页疾病列表数据
 		homeStore.fetchAllData() //获取首页全部数据
-		console.log(mydata);
+		// addDiseaseFn()
+		// console.log(mydata);
+		// mydata.value = null
+		// console.log(mydata.value, 'mydata');
+		// console.log(addDisease, 'adddiaease');
+
 	})
 
 	// tab-control的点击事件,0代表我的。1代表全部
 	function handleTabItemClick(index) {
 		current.value = index
-		console.log(current.value, 'current');
+		// console.log(current.value, 'current');
+	}
+	// 用户初始登录添加疾病
+	function addDiseaseFn() {
+		console.log(current.value, 'value');
 	}
 
 	//  grid-view-item 的点击事件（会跳转到详情页面）

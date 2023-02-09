@@ -1,10 +1,13 @@
 <template>
-	<!-- 	<view v-html="content">
-
+	<!-- <view ref="contentEl" class="content">
+		111
 	</view> -->
-	<rich-text>
+	<rich-text class="content" :nodes="content.value">
 
 	</rich-text>
+	<!-- <rich-text>
+
+	</rich-text> -->
 
 </template>
 
@@ -15,7 +18,9 @@
 	import {
 		nextTick,
 		onMounted,
-		ref
+		ref,
+		getCurrentInstance,
+		toRef
 	} from 'vue'
 	import {
 		getDetails
@@ -28,10 +33,15 @@
 		}
 	})
 	// console.log('iid=', props.iid);
-	let content = ''
 
-
-
+	// 获取this
+	const {
+		ctx
+	} = getCurrentInstance()
+	const _this = ctx
+	const contentEl = ref()
+	let content = ref('')
+	let test = '<div style="text-align:center;"><img src="https://web-assets.dcloud.net.cn/unidoc/zh/uni@2x.png"/></div>'
 	// const tagId = ref()
 
 	// onLoad((options) => {
@@ -39,18 +49,51 @@
 	// 	tagId.value = options.tagId
 	// 	console.log(tagId, 'tagid');
 	// })
-	// 	onLoad(() => {
-	// 		getdetail(props.tagId)
-	// 	})
-	// async function getdetail(id) {
-	// 	const res = await getDetails(id)
-	// 	content = res.data.content || ''
-	// 	console.log(content, 'content');
-	// }
+	onLoad(() => {
+		getdetail(props.tagId)
+		// console.log(content, 'content');
+
+	})
+	onMounted(() => {
+		// console.log(contentEl.value, 'contentEl');
+	})
+	async function getdetail(id) {
+		const res = await getDetails(id)
+
+
+
+		content.value = htmlUnescape(res.data.content)
+		console.log(content.value, 'con');
+		console.log(typeof content.value, 'type');
+
+
+	}
+
+	function htmlUnescape(html) {
+		return html.replace(/&lt;|&gt;|&quot;|&amp;/g, match => {
+			switch (match) {
+				case '&lt;':
+					return '<';
+				case '&gt;':
+					return '>';
+				case '&quot;':
+					return '"';
+				case '&amp;':
+					return '&';
+
+
+
+			}
+		})
+	}
+
+	function changeContent() {
+
+	}
 </script>
 
 <style lang="scss">
-	.text {
+	.content {
 		width: 100vw;
 		height: 100vh;
 	}
