@@ -22,6 +22,13 @@ export const getDetails = (id) => {
 		id
 	})
 }
+export const addDisease = (arr) => {
+	console.log(arr, 'arr');
+	return DxRequest.post('/article/addMyArticle', {
+		arr
+	})
+}
+
 
 // import hyRequest from './index.js'
 

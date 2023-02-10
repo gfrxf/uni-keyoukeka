@@ -4,7 +4,8 @@
     "pages/daka/daka",
     "pages/social/social",
     "pages/profile/profile",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/add/add"
   ],
   "window": {
     "navigationBarTextStyle": "white",

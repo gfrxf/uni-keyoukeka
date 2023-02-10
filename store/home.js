@@ -14,7 +14,8 @@ export const useHomeStore = defineStore('home', {
 	state: () => {
 		return {
 			mydata: [],
-			alldata: []
+			alldata: [],
+			isAdd: false
 
 		}
 	},
@@ -28,11 +29,16 @@ export const useHomeStore = defineStore('home', {
 		// 	this.recommends = res.data.recommend.list || []
 		// },
 		async fetchMyData(openId) {
+			console.log(111);
 			const res = await getMyData(openId)
 			this.mydata = res.data || []
 			// this.mydata = []
-			// console.log(res, 'my');
-			console.log(this.mydata);
+			if (res.data.length !== 0) {
+				this.changeAdd()
+				console.log(this.isAdd, 'isadd');
+			}
+
+
 		},
 		async fetchAllData() {
 			const res = await getAllData()
@@ -40,6 +46,9 @@ export const useHomeStore = defineStore('home', {
 			// console.log(res, 'all');
 			// console.log(this.alldata.value);
 		},
+		changeAdd() {
+			this.isAdd = false;
+		}
 
 
 	}

@@ -5,18 +5,26 @@ const useHomeStore = common_vendor.defineStore("home", {
   state: () => {
     return {
       mydata: [],
-      alldata: []
+      alldata: [],
+      isAdd: false
     };
   },
   actions: {
     async fetchMyData(openId) {
+      console.log(111);
       const res = await service_home.getMyData(openId);
       this.mydata = res.data || [];
-      console.log(this.mydata);
+      if (res.data.length !== 0) {
+        this.changeAdd();
+        console.log(this.isAdd, "isadd");
+      }
     },
     async fetchAllData() {
       const res = await service_home.getAllData();
       this.alldata = res.data || [];
+    },
+    changeAdd() {
+      this.isAdd = false;
     }
   }
 });

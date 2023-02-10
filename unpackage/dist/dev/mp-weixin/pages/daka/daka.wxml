@@ -1,1 +1,1 @@
-<view> 打卡 </view>
+<view><view><uni-calendar wx:if="{{c}}" class="r" u-r="calendar" bindconfirm="{{b}}" u-i="51a49010-0" bind:__l="__l" u-p="{{c}}"/><button bindtap="{{d}}">打开日历</button></view></view>

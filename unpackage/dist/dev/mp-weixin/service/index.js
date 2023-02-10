@@ -6,6 +6,9 @@ class DxRequest {
   request(url, method, data) {
     return new Promise((resolve, reject) => {
       common_vendor.index.request({
+        header: {
+          Authorization: common_vendor.index.getStorageSync("openid")
+        },
         url: BASE_URL + url,
         timeout: TIME_OUT,
         method: method || "GET",

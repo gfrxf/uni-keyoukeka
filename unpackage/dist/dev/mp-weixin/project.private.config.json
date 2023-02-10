@@ -17,6 +17,13 @@
                         "enabled": true,
                         "pages": []
                     }
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/daka/daka",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

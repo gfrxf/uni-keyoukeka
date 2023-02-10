@@ -22,6 +22,10 @@
 
 		<!-- 选项卡组件 -->
 		<tab-control :titles="['我的','全部']" @tabItemClick="handleTabItemClick"></tab-control>
+		<!-- 还未添加 -->
+		<view class="addcontent" v-if=" !isAdd && !current">
+			<button class="btnEl" @click="addDisease">您还未登记您所患疾病，请先添加</button>
+		</view>
 		<!-- 我的 -->
 		<uni-grid v-if=!current :column="2" :square="false" borderColor="#B0EC64">
 			<template v-for="(itemInfo,index) in mydata" :key="index">
@@ -38,6 +42,7 @@
 				</uni-grid-item>
 			</template>
 		</uni-grid>
+
 	</view>
 </template>
 
@@ -65,10 +70,12 @@
 	} from 'vuex'
 
 	const current = ref(0)
+
 	const homeStore = useHomeStore()
 	const {
 		mydata,
-		alldata
+		alldata,
+		isAdd
 	} = storeToRefs(homeStore)
 
 
@@ -77,11 +84,7 @@
 		// console.log(openId, 'openid');
 		homeStore.fetchMyData(openId) //获取首页疾病列表数据
 		homeStore.fetchAllData() //获取首页全部数据
-		// addDiseaseFn()
-		// console.log(mydata);
-		// mydata.value = null
-		// console.log(mydata.value, 'mydata');
-		// console.log(addDisease, 'adddiaease');
+
 
 	})
 
@@ -97,15 +100,19 @@
 
 	//  grid-view-item 的点击事件（会跳转到详情页面）
 	function handleGridItemClick(itemInfo) {
-		uni.$emit('send', {
-			tagId: itemInfo.tagId,
-			content: itemInfo.content
-		})
+
 		uni.navigateTo({
 			url: '/pages/detail/detail?tagId=' + itemInfo.tagId
 
 		})
 
+	}
+
+	function addDisease() {
+		uni.navigateTo({
+			url: '/pages/add/add?openId'
+
+		})
 	}
 </script>
 
@@ -119,4 +126,16 @@
 	// 	justify-content: center;
 	// 	flex-direction: column;
 	// }
+	.addcontent {
+		width: 100%;
+		height: 200rpx;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.btnEl {
+			background-color: #B0EC64;
+		}
+	}
 </style>

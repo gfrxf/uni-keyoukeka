@@ -25,7 +25,8 @@ const _sfc_main = {
     const homeStore = store_home.useHomeStore();
     const {
       mydata,
-      alldata
+      alldata,
+      isAdd
     } = common_vendor.storeToRefs(homeStore);
     common_vendor.onLoad(() => {
       const openId = common_vendor.index.getStorageSync("openid");
@@ -36,12 +37,13 @@ const _sfc_main = {
       current.value = index;
     }
     function handleGridItemClick(itemInfo) {
-      common_vendor.index.$emit("send", {
-        tagId: itemInfo.tagId,
-        content: itemInfo.content
-      });
       common_vendor.index.navigateTo({
         url: "/pages/detail/detail?tagId=" + itemInfo.tagId
+      });
+    }
+    function addDisease() {
+      common_vendor.index.navigateTo({
+        url: "/pages/add/add?openId"
       });
     }
     return (_ctx, _cache) => {
@@ -53,9 +55,13 @@ const _sfc_main = {
         c: common_vendor.p({
           titles: ["\u6211\u7684", "\u5168\u90E8"]
         }),
-        d: !current.value
+        d: !common_vendor.unref(isAdd) && !current.value
+      }, !common_vendor.unref(isAdd) && !current.value ? {
+        e: common_vendor.o(addDisease)
+      } : {}, {
+        f: !current.value
       }, !current.value ? {
-        e: common_vendor.f(common_vendor.unref(mydata), (itemInfo, index, i0) => {
+        g: common_vendor.f(common_vendor.unref(mydata), (itemInfo, index, i0) => {
           return {
             a: common_vendor.o(handleGridItemClick, index),
             b: "0bd640e0-9-" + i0 + "," + ("0bd640e0-8-" + i0),
@@ -66,15 +72,15 @@ const _sfc_main = {
             e: index
           };
         }),
-        f: common_vendor.p({
+        h: common_vendor.p({
           column: 2,
           square: false,
           borderColor: "#B0EC64"
         })
       } : {}, {
-        g: current.value
+        i: current.value
       }, current.value ? {
-        h: common_vendor.f(common_vendor.unref(alldata), (itemInfo, index, i0) => {
+        j: common_vendor.f(common_vendor.unref(alldata), (itemInfo, index, i0) => {
           return {
             a: common_vendor.o(handleGridItemClick, index),
             b: "0bd640e0-12-" + i0 + "," + ("0bd640e0-11-" + i0),
@@ -85,7 +91,7 @@ const _sfc_main = {
             e: index
           };
         }),
-        i: common_vendor.p({
+        k: common_vendor.p({
           column: 2,
           square: false,
           borderColor: "#B0EC64"

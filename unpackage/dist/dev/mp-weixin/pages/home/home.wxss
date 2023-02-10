@@ -17,3 +17,13 @@
 .img4 {
   margin-left: 120rpx;
 }
+.addcontent {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addcontent .btnEl {
+  background-color: #B0EC64;
+}
