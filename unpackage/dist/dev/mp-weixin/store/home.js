@@ -10,21 +10,22 @@ const useHomeStore = common_vendor.defineStore("home", {
     };
   },
   actions: {
-    async fetchMyData(openId) {
+    async fetchMyData(openid) {
       console.log(111);
-      const res = await service_home.getMyData(openId);
-      this.mydata = res.data || [];
-      if (res.data.length !== 0) {
+      const res = await service_home.getMyData(openid);
+      if (res.data.length !== void 0) {
         this.changeAdd();
         console.log(this.isAdd, "isadd");
       }
+      this.mydata = res.data || [];
+      console.log(this.mydata);
     },
     async fetchAllData() {
       const res = await service_home.getAllData();
       this.alldata = res.data || [];
     },
     changeAdd() {
-      this.isAdd = false;
+      this.isAdd = true;
     }
   }
 });

@@ -1,6 +1,6 @@
 "use strict";
-const service_home = require("../../service/home.js");
 const common_vendor = require("../../common/vendor.js");
+const service_home = require("../../service/home.js");
 require("../../service/index.js");
 const _sfc_main = {
   data() {
@@ -46,9 +46,26 @@ const _sfc_main = {
     async submitHandle() {
       console.log(this.checkbox1, "checkbox1");
       const arg = this.checkbox1.join(",");
-      console.log(arg, "arg");
-      const res = await service_home.addDisease(arg);
+      const argumet = JSON.stringify({
+        tagId: arg
+      });
+      console.log(argumet, "argumet");
+      const res = await service_home.addDisease(argumet);
       console.log(res, "res");
+      if (res.success === true) {
+        common_vendor.index.showToast({
+          title: "\u6DFB\u52A0\u6210\u529F",
+          duration: 2e3
+        });
+        common_vendor.index.navigateBack({
+          delta: 1
+        });
+      } else {
+        common_vendor.index.showToast({
+          title: "\u5931\u8D25\u8BF7\u91CD\u8BD5",
+          duration: 2e3
+        });
+      }
     }
   }
 };

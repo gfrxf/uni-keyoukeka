@@ -3,8 +3,20 @@ const service_daka = require("../../service/daka.js");
 const common_vendor = require("../../common/vendor.js");
 require("../../service/index.js");
 const _sfc_main = {
+  components: {
+    zqsSelect
+  },
   data() {
-    return {};
+    return {
+      importUserId: [
+        {
+          value: "0",
+          label: "\u4ECA\u65E5\u4E0D\u62BD\u70DF"
+        }
+      ],
+      clockFlag: "",
+      rank: []
+    };
   },
   methods: {
     open() {
@@ -14,8 +26,7 @@ const _sfc_main = {
       console.log(e);
     },
     async getdakaImfo() {
-      const res = await service_daka.getDakaData();
-      console.log(res, "res");
+      await service_daka.getDakaData();
     }
   },
   onLoad() {

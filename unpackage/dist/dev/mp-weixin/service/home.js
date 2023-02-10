@@ -15,9 +15,7 @@ const getDetails = (id) => {
 };
 const addDisease = (arr) => {
   console.log(arr, "arr");
-  return service_index.DxRequest.post("/article/addMyArticle", {
-    arr
-  });
+  return service_index.DxRequest.post("/article/addMyArticle", arr);
 };
 exports.addDisease = addDisease;
 exports.getAllData = getAllData;

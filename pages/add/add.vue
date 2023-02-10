@@ -63,10 +63,27 @@
 			async submitHandle() {
 				console.log(this.checkbox1, 'checkbox1');
 				const arg = this.checkbox1.join(',')
-				console.log(arg, 'arg');
+				const argumet = JSON.stringify({
+					tagId: arg
+				})
+				console.log(argumet, 'argumet');
 
-				const res = await addDisease(arg)
+				const res = await addDisease(argumet)
 				console.log(res, 'res');
+				if (res.success === true) {
+					uni.showToast({
+						title: "添加成功",
+						duration: 2000
+					})
+					uni.navigateBack({
+						delta: 1
+					})
+				} else {
+					uni.showToast({
+						title: "失败请重试",
+						duration: 2000
+					})
+				}
 			}
 		}
 	}

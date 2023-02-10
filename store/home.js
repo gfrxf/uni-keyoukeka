@@ -28,15 +28,18 @@ export const useHomeStore = defineStore('home', {
 		// 	this.banners = res.data.banner.list || []
 		// 	this.recommends = res.data.recommend.list || []
 		// },
-		async fetchMyData(openId) {
+		async fetchMyData(openid) {
 			console.log(111);
-			const res = await getMyData(openId)
-			this.mydata = res.data || []
-			// this.mydata = []
-			if (res.data.length !== 0) {
+			const res = await getMyData(openid)
+			if (res.data.length !== undefined) {
+
 				this.changeAdd()
 				console.log(this.isAdd, 'isadd');
 			}
+			this.mydata = res.data || []
+			console.log(this.mydata);
+			// this.mydata = []
+
 
 
 		},
@@ -47,7 +50,7 @@ export const useHomeStore = defineStore('home', {
 			// console.log(this.alldata.value);
 		},
 		changeAdd() {
-			this.isAdd = false;
+			this.isAdd = true;
 		}
 
 
