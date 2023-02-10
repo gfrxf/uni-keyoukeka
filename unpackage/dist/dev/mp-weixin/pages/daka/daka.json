@@ -1,8 +1,9 @@
 {
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "fui-radio-group": "../../components/firstui/fui-radio-group/fui-radio-group",
-    "fui-radio": "../../components/firstui/fui-radio/fui-radio",
+    "fui-checkbox-group": "../../components/firstui/fui-checkbox-group/fui-checkbox-group",
+    "fui-checkbox": "../../components/firstui/fui-checkbox/fui-checkbox",
+    "fui-button": "../../components/firstui/fui-button/fui-button",
     "uni-calendar": "../../uni_modules/uni-calendar/components/uni-calendar/uni-calendar",
     "fui-list-cell": "../../node-modules/firstui-uni/firstui/fui-list-cell/fui-list-cell",
     "fui-label": "../../node-modules/firstui-uni/firstui/fui-label/fui-label"

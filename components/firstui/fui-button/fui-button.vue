@@ -1,5 +1,6 @@
 <template>
-	<view class="fui-button__wrap" :class="[!width || width==='100%' || width===true?'fui-button__flex-1':'',disabled && !disabledBackground ? 'fui-button__opacity' : '']"
+	<view class="fui-button__wrap"
+		:class="[!width || width==='100%' || width===true?'fui-button__flex-1':'',disabled && !disabledBackground ? 'fui-button__opacity' : '']"
 		:style="{width: width,height: getHeight,marginTop:margin[0] || 0,	marginRight:margin[1]||0,marginBottom:margin[2] || margin[0]||0,marginLeft:margin[3] || margin[1]||0,borderRadius: getRadius,background:getBackground}"
 		@touchstart="handleStart" @touchend="handleClick" @touchcancel="handleEnd">
 		<button class="fui-button" :class="[
@@ -163,7 +164,7 @@
 				// #endif
 				let colors = {
 					primary: '#465CFF',
-					success: '#09BE4F',
+					success: '#B0EC64',
 					warning: '#FFB703',
 					danger: '#FF2B2B',
 					link: 'transparent',

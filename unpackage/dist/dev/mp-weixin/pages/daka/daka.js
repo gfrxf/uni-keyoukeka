@@ -1,34 +1,22 @@
 "use strict";
-const service_daka = require("../../service/daka.js");
 const common_vendor = require("../../common/vendor.js");
+const service_daka = require("../../service/daka.js");
 require("../../service/index.js");
-const fuiRadioGroup = () => "../../components/firstui/fui-radio-group/fui-radio-group.js";
-const fuiRadio = () => "../../components/firstui/fui-radio/fui-radio.js";
+const fuiCheckboxGroup = () => "../../components/firstui/fui-checkbox-group/fui-checkbox-group.js";
+const fuiCheckbox = () => "../../components/firstui/fui-checkbox/fui-checkbox.js";
+const fuiButton = () => "../../components/firstui/fui-button/fui-button.js";
 const _sfc_main = {
   components: {
-    fuiRadioGroup,
-    fuiRadio
+    fuiCheckboxGroup,
+    fuiCheckbox,
+    fuiButton
   },
   data() {
     return {
       val: "1",
-      radioItems: [
-        {
-          name: "\u5C0F\u4E8E18\u5C81",
-          value: "1",
-          checked: true
-        },
-        {
-          name: "18~28\u5C81",
-          value: "2",
-          checked: false
-        },
-        {
-          name: "29~40\u5C81",
-          value: "3",
-          checked: false
-        }
-      ]
+      checkboxItems: [],
+      clockFlag: false,
+      msg: "\u9009\u597D\u4E86\u6253\u5361"
     };
   },
   methods: {
@@ -39,7 +27,27 @@ const _sfc_main = {
       console.log(e);
     },
     async getdakaImfo() {
-      await service_daka.getDakaData();
+      try {
+        const res = await service_daka.getDakaData();
+        this.checkboxItems = res.data.clockType, this.clockFlag = res.data.clockFlag;
+        this.msg = "\u4ECA\u65E5\u5DF2\u6253\u5361";
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    async handleClick() {
+      const res = await service_daka.daka();
+      if (res.success === true) {
+        common_vendor.index.showToast({
+          title: "\u6210\u529F\u83B7\u5F975\u79EF\u5206",
+          duration: 2e3
+        });
+      } else {
+        common_vendor.index.showToast({
+          title: res.msg,
+          duration: 2e3
+        });
+      }
     }
   },
   onLoad() {
@@ -48,19 +56,21 @@ const _sfc_main = {
 };
 if (!Array) {
   const _easycom_uni_calendar2 = common_vendor.resolveComponent("uni-calendar");
-  const _easycom_fui_radio2 = common_vendor.resolveComponent("fui-radio");
+  const _easycom_fui_checkbox2 = common_vendor.resolveComponent("fui-checkbox");
   const _easycom_fui_list_cell2 = common_vendor.resolveComponent("fui-list-cell");
   const _easycom_fui_label2 = common_vendor.resolveComponent("fui-label");
-  const _easycom_fui_radio_group2 = common_vendor.resolveComponent("fui-radio-group");
-  (_easycom_uni_calendar2 + _easycom_fui_radio2 + _easycom_fui_list_cell2 + _easycom_fui_label2 + _easycom_fui_radio_group2)();
+  const _easycom_fui_checkbox_group2 = common_vendor.resolveComponent("fui-checkbox-group");
+  const _easycom_fui_button2 = common_vendor.resolveComponent("fui-button");
+  (_easycom_uni_calendar2 + _easycom_fui_checkbox2 + _easycom_fui_list_cell2 + _easycom_fui_label2 + _easycom_fui_checkbox_group2 + _easycom_fui_button2)();
 }
 const _easycom_uni_calendar = () => "../../uni_modules/uni-calendar/components/uni-calendar/uni-calendar.js";
-const _easycom_fui_radio = () => "../../node-modules/firstui-uni/firstui/fui-radio/fui-radio.js";
+const _easycom_fui_checkbox = () => "../../node-modules/firstui-uni/firstui/fui-checkbox/fui-checkbox.js";
 const _easycom_fui_list_cell = () => "../../node-modules/firstui-uni/firstui/fui-list-cell/fui-list-cell.js";
 const _easycom_fui_label = () => "../../node-modules/firstui-uni/firstui/fui-label/fui-label.js";
-const _easycom_fui_radio_group = () => "../../node-modules/firstui-uni/firstui/fui-radio-group/fui-radio-group.js";
+const _easycom_fui_checkbox_group = () => "../../node-modules/firstui-uni/firstui/fui-checkbox-group/fui-checkbox-group.js";
+const _easycom_fui_button = () => "../../node-modules/firstui-uni/firstui/fui-button/fui-button.js";
 if (!Math) {
-  (_easycom_uni_calendar + _easycom_fui_radio + _easycom_fui_list_cell + _easycom_fui_label + _easycom_fui_radio_group)();
+  (_easycom_uni_calendar + _easycom_fui_checkbox + _easycom_fui_list_cell + _easycom_fui_label + _easycom_fui_checkbox_group + _easycom_fui_button)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
@@ -73,18 +83,25 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       ["end-date"]: "2025-2-10"
     }),
     d: common_vendor.o((...args) => $options.open && $options.open(...args)),
-    e: common_vendor.f($data.radioItems, (item, index, i0) => {
+    e: common_vendor.f($data.checkboxItems, (item, index, i0) => {
       return {
-        a: common_vendor.t(item.name),
+        a: common_vendor.t(item.clockTypeDetail),
         b: "51a49010-4-" + i0 + "," + ("51a49010-3-" + i0),
         c: common_vendor.p({
           checked: item.checked,
-          value: item.value
+          color: "#B0EC64",
+          value: item.clockTypeId
         }),
         d: "51a49010-3-" + i0 + "," + ("51a49010-2-" + i0),
         e: index,
         f: "51a49010-2-" + i0 + ",51a49010-1"
       };
+    }),
+    f: common_vendor.o($options.handleClick),
+    g: common_vendor.p({
+      disabled: $data.clockFlag,
+      type: "success",
+      text: $data.msg
     })
   };
 }

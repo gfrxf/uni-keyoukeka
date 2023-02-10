@@ -38,3 +38,6 @@ page {
   align-items: center;
   justify-content: space-between;
 }
+.dakabtn {
+  margin-top: 80rpx;
+}

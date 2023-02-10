@@ -1,55 +1,51 @@
 <template>
 	<view>
+
 		<view>
 			<uni-calendar ref="calendar" :insert="false" @confirm="confirm" :lunar="true" :start-date="'2023-2-10'"
 				:end-date="'2025-2-10'" />
 			<button @click="open">打开日历</button>
 		</view>
-		<fui-radio-group>
-			<fui-label v-for="(item,index) in radioItems" :key="index">
+
+		<fui-checkbox-group>
+			<fui-label v-for="(item,index) in checkboxItems" :key="index">
 				<fui-list-cell>
 					<view class="fui-list__cell">
-						<text>{{item.name}}</text>
-						<fui-radio :checked="item.checked" :value="item.value">
-						</fui-radio>
+						<text>{{item.clockTypeDetail}}</text>
+						<fui-checkbox :checked="item.checked" color="#B0EC64" :value="item.clockTypeId">
+						</fui-checkbox>
 					</view>
 				</fui-list-cell>
 			</fui-label>
-		</fui-radio-group>
+		</fui-checkbox-group>
+		<!-- <button class="dakabtn" @click="handleClick">选好了打卡</button> -->
+		<view class="dakabtn">
+			<fui-button :disabled="clockFlag" type="success" :text="msg" @click="handleClick"></fui-button>
+		</view>
 
 	</view>
 </template>
 
 <script>
 	import {
-		getDakaData
+		getDakaData,
+		daka
 	} from '@/service/daka.js'
-	import fuiRadioGroup from "@/components/firstui/fui-radio-group/fui-radio-group.vue"
-	import fuiRadio from "@/components/firstui/fui-radio/fui-radio.vue"
+	import fuiCheckboxGroup from "@/components/firstui/fui-checkbox-group/fui-checkbox-group.vue"
+	import fuiCheckbox from "@/components/firstui/fui-checkbox/fui-checkbox.vue"
+	import fuiButton from "@/components/firstui/fui-button/fui-button.vue"
 	export default {
 		components: {
-			fuiRadioGroup,
-			fuiRadio
+			fuiCheckboxGroup,
+			fuiCheckbox,
+			fuiButton
 		},
 		data() {
 			return {
 				val: '1',
-				radioItems: [{
-						name: '小于18岁',
-						value: '1',
-						checked: true
-					},
-					{
-						name: '18~28岁',
-						value: '2',
-						checked: false
-					},
-					{
-						name: '29~40岁',
-						value: '3',
-						checked: false
-					}
-				]
+				checkboxItems: [],
+				clockFlag: false,
+				msg: '选好了打卡'
 
 
 			}
@@ -62,12 +58,29 @@
 				console.log(e);
 			},
 			async getdakaImfo() {
-				const res = await getDakaData()
-				// console.log(res, 'res');
-				// this.importUserId = res.data.clockType || []
-				// this.rank = res.data.rank || []
-				// console.log(this.importUserId, this.rank,
-				// 	'test');
+				try {
+					const res = await getDakaData()
+					this.checkboxItems = res.data.clockType,
+						this.clockFlag = res.data.clockFlag
+					this.msg = '今日已打卡'
+				} catch (err) {
+					console.log(err);
+				}
+
+			},
+			async handleClick() {
+				const res = await daka()
+				if (res.success === true) {
+					uni.showToast({
+						title: "成功获得5积分",
+						duration: 2000
+					})
+				} else {
+					uni.showToast({
+						title: res.msg,
+						duration: 2000
+					})
+				}
 			}
 		},
 		onLoad() {
@@ -105,5 +118,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+
+	.dakabtn {
+		margin-top: 80rpx;
+		// background-color: #B0EC64;
+
 	}
 </style>
