@@ -29,9 +29,9 @@ export const useHomeStore = defineStore('home', {
 		// 	this.recommends = res.data.recommend.list || []
 		// },
 		async fetchMyData(openid) {
-			console.log(111);
+			console.log(111, 'store');
 			const res = await getMyData(openid)
-			if (res.data.length !== undefined) {
+			if (res.data?.length !== undefined) {
 
 				this.changeAdd()
 				console.log(this.isAdd, 'isadd');

@@ -75,10 +75,15 @@
 						title: "添加成功",
 						duration: 2000
 					})
-					uni.navigateBack({
-						delta: 1
+					uni.switchTab({
+						url: '/pages/home/home'
 					})
+					uni.$emit('update', {
+						msg: '页面更新'
+					})
+
 				} else {
+
 					uni.showToast({
 						title: "失败请重试",
 						duration: 2000

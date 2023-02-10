@@ -29,9 +29,21 @@ const _sfc_main = {
       isAdd
     } = common_vendor.storeToRefs(homeStore);
     common_vendor.onLoad(() => {
+      console.log("home\u6E32\u67D3");
       const openId = common_vendor.index.getStorageSync("openid");
       homeStore.fetchMyData(openId);
       homeStore.fetchAllData();
+      common_vendor.index.$on("update", function(data) {
+        console.log("\u76D1\u542C\u5230\u4E8B\u4EF6\u6765\u81EA update \uFF0C\u643A\u5E26\u53C2\u6570 msg \u4E3A\uFF1A" + data.msg);
+        homeStore.fetchMyData(openId);
+      });
+    });
+    common_vendor.onBeforeUpdate(() => {
+    });
+    common_vendor.onMounted(() => {
+      console.log("update");
+      const openId = common_vendor.index.getStorageSync("openid");
+      homeStore.fetchMyData(openId);
     });
     function handleTabItemClick(index) {
       current.value = index;

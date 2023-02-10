@@ -11,9 +11,10 @@ const useHomeStore = common_vendor.defineStore("home", {
   },
   actions: {
     async fetchMyData(openid) {
-      console.log(111);
+      var _a;
+      console.log(111, "store");
       const res = await service_home.getMyData(openid);
-      if (res.data.length !== void 0) {
+      if (((_a = res.data) == null ? void 0 : _a.length) !== void 0) {
         this.changeAdd();
         console.log(this.isAdd, "isadd");
       }

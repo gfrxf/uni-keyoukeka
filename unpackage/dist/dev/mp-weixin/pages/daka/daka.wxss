@@ -14,9 +14,27 @@
 /* 水平间距 */
 /* 颜色变量 */
 /* 行为相关颜色 */
-.main-box {
+page {
+  font-weight: normal;
+}
+.fui-section__title {
+  margin-left: 32rpx;
+}
+.fui-list__item {
+  width: 100%;
   display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 28rpx 32rpx;
+  box-sizing: border-box;
+}
+.fui-text {
+  font-size: 30rpx;
+  padding-left: 16rpx;
+}
+.fui-list__cell {
+  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  background: #f7f7f7;
-  padding: 30rpx;
 }

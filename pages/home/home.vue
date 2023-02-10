@@ -63,11 +63,14 @@
 	} from '@/store/home.js'
 	import {
 		ref,
-		toRaw
+		toRaw,
+		onBeforeUpdate,
+		onMounted
 	} from 'vue'
 	import {
 		createLogger
 	} from 'vuex'
+
 
 	const current = ref(0)
 
@@ -80,12 +83,28 @@
 
 
 	onLoad(() => {
+		console.log('home渲染');
 		const openId = uni.getStorageSync("openid")
 		// console.log(openId, 'openid');
 		homeStore.fetchMyData(openId) //获取首页疾病列表数据
 		homeStore.fetchAllData() //获取首页全部数据
+		uni.$on('update', function(data) {
+			console.log('监听到事件来自 update ，携带参数 msg 为：' + data.msg);
+			homeStore.fetchMyData(openId) //获取首页疾病列表数据
+		})
 
+	})
 
+	onBeforeUpdate(() => {
+		// console.log('update');
+		// const openId = uni.getStorageSync("openid")
+		// homeStore.fetchMyData(openId) //获取首页疾病列表数据
+	})
+
+	onMounted(() => {
+		console.log('update');
+		const openId = uni.getStorageSync("openid")
+		homeStore.fetchMyData(openId) //获取首页疾病列表数据
 	})
 
 	// tab-control的点击事件,0代表我的。1代表全部

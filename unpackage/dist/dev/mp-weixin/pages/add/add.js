@@ -57,8 +57,11 @@ const _sfc_main = {
           title: "\u6DFB\u52A0\u6210\u529F",
           duration: 2e3
         });
-        common_vendor.index.navigateBack({
-          delta: 1
+        common_vendor.index.switchTab({
+          url: "/pages/home/home"
+        });
+        common_vendor.index.$emit("update", {
+          msg: "\u9875\u9762\u66F4\u65B0"
         });
       } else {
         common_vendor.index.showToast({

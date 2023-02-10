@@ -8094,6 +8094,12 @@ const globalStyle = {
   navigationBarBackgroundColor: "#B0EC64",
   backgroundColor: "#B0EC64"
 };
+const easycom = {
+  autoscan: true,
+  custom: {
+    "fui-(.*)": "firstui-uni/firstui/fui-$1/fui-$1.vue"
+  }
+};
 const tabBar = {
   selectedColor: "#B0EC64",
   list: [
@@ -8126,6 +8132,7 @@ const tabBar = {
 const t = {
   pages,
   globalStyle,
+  easycom,
   tabBar
 };
 function n(e2) {
@@ -10532,7 +10539,9 @@ exports.initVueI18n = initVueI18n;
 exports.n = n$1;
 exports.o = o$1;
 exports.onBeforeMount = onBeforeMount;
+exports.onBeforeUpdate = onBeforeUpdate;
 exports.onLoad = onLoad;
+exports.onMounted = onMounted;
 exports.p = p$1;
 exports.ref = ref;
 exports.resolveComponent = resolveComponent;
