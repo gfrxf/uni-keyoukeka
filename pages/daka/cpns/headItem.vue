@@ -39,8 +39,17 @@
 		},
 		data() {
 			return {
-				// arr: rank.slice(0, 3)
+				arr: []
 			}
+		},
+		onLoad() {
+			console.log(2222);
+			// this.arr = this.rank.slice(0, 3)
+			// console.log(this.arr, 'arr');
+		},
+		mounted() {
+
+			console.log(this.$props, 'arr');
 		}
 	}
 </script>

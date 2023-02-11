@@ -65,7 +65,7 @@
 				const res = await getDakaData()
 				this.checkboxItems = res.data.clockType
 				this.clockFlag = res.data.clockFlag
-				this.rank = res.data.rank
+				this.rank = res.data.rank?.slice(0, 5)
 				console.log(this.rank, 'rank');
 				if (res.data.clockFlag === true) {
 					this.msg = '今日已打卡'

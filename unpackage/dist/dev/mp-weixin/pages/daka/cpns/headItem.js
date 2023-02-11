@@ -10,7 +10,15 @@ const _sfc_main = {
     }
   },
   data() {
-    return {};
+    return {
+      arr: []
+    };
+  },
+  onLoad() {
+    console.log(2222);
+  },
+  mounted() {
+    console.log(this.$props, "arr");
   }
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {

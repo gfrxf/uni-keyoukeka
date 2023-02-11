@@ -30,10 +30,11 @@ const _sfc_main = {
       console.log(e);
     },
     async getdakaImfo() {
+      var _a;
       const res = await service_daka.getDakaData();
       this.checkboxItems = res.data.clockType;
       this.clockFlag = res.data.clockFlag;
-      this.rank = res.data.rank;
+      this.rank = (_a = res.data.rank) == null ? void 0 : _a.slice(0, 5);
       console.log(this.rank, "rank");
       if (res.data.clockFlag === true) {
         this.msg = "\u4ECA\u65E5\u5DF2\u6253\u5361";
