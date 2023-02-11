@@ -8,6 +8,9 @@ const _sfc_main = {
       default: [],
       required: true
     }
+  },
+  data() {
+    return {};
   }
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {

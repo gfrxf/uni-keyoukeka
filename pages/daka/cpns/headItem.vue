@@ -33,8 +33,14 @@
 				type: Array,
 				default: [],
 				required: true,
+
 			}
 
+		},
+		data() {
+			return {
+				// arr: rank.slice(0, 3)
+			}
 		}
 	}
 </script>
