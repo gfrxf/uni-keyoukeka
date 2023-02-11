@@ -1,0 +1,66 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 水平间距 */
+/* 水平间距 */
+/* 颜色变量 */
+/* 行为相关颜色 */
+.headItem {
+  display: flex;
+  flex-direction: column;
+}
+.headItem .title {
+  margin: 0 auto;
+}
+.headItem .head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 20rpx;
+}
+.headItem .head .item {
+  box-sizing: border-box;
+  border-radius: 5rpx;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15rpx;
+  border: 1px solid #B0EC64;
+  padding: 10rpx;
+}
+.headItem .head .item .img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.headItem .head .item .info {
+  margin-left: 60rpx;
+  font-size: 30rpx;
+}
+.headItem .main {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+}
+.headItem .img1 {
+  left: 86%;
+  top: 10%;
+}
+.headItem .img2 {
+  left: 86%;
+  top: 27%;
+}
+.headItem .img3 {
+  left: 86%;
+  top: 44%;
+}

@@ -1,6 +1,6 @@
 <template>
 	<view>
-
+		<head-item :rank="rank"></head-item>
 		<view>
 			<uni-calendar ref="calendar" :insert="false" @confirm="confirm" :lunar="true" :start-date="'2023-2-10'"
 				:end-date="'2025-2-10'" />
@@ -34,18 +34,21 @@
 	import fuiCheckboxGroup from "@/components/firstui/fui-checkbox-group/fui-checkbox-group.vue"
 	import fuiCheckbox from "@/components/firstui/fui-checkbox/fui-checkbox.vue"
 	import fuiButton from "@/components/firstui/fui-button/fui-button.vue"
+	import headItem from './cpns/headItem.vue'
 	export default {
 		components: {
 			fuiCheckboxGroup,
 			fuiCheckbox,
-			fuiButton
+			fuiButton,
+			headItem
 		},
 		data() {
 			return {
 				val: '1',
 				checkboxItems: [],
 				clockFlag: false,
-				msg: '选好了打卡'
+				msg: '选好了打卡',
+				rank: []
 
 
 			}
@@ -58,23 +61,28 @@
 				console.log(e);
 			},
 			async getdakaImfo() {
-				try {
-					const res = await getDakaData()
-					this.checkboxItems = res.data.clockType,
-						this.clockFlag = res.data.clockFlag
+
+				const res = await getDakaData()
+				this.checkboxItems = res.data.clockType
+				this.clockFlag = res.data.clockFlag
+				this.rank = res.data.rank
+				console.log(this.rank, 'rank');
+				if (res.data.clockFlag === true) {
 					this.msg = '今日已打卡'
-				} catch (err) {
-					console.log(err);
 				}
+
+
 
 			},
 			async handleClick() {
 				const res = await daka()
 				if (res.success === true) {
+
 					uni.showToast({
 						title: "成功获得5积分",
 						duration: 2000
 					})
+					this.getdakaImfo()
 				} else {
 					uni.showToast({
 						title: res.msg,
