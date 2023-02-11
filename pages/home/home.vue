@@ -11,6 +11,7 @@
 			</uni-grid-item>
 			<uni-grid-item>
 				<image src="../../static/images/home/img10.png" mode="heightFix"></image>
+				git
 			</uni-grid-item>
 			<uni-grid-item>
 				<image src="../../static/images/home/img7.png" mode="heightFix"></image>
