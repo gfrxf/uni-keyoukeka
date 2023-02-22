@@ -1,6 +1,6 @@
 "use strict";
-const service_home = require("../../service/home.js");
 const common_vendor = require("../../common/vendor.js");
+const service_home = require("../../service/home.js");
 require("../../service/index.js");
 const tabcontrol = () => "../../components/tab-control/tab-control.js";
 const _sfc_main = {
@@ -12,8 +12,25 @@ const _sfc_main = {
       tagId: 1,
       contentEl: "",
       test: "<div>Hello World!</div>",
-      current: 0
+      current: 0,
+      src: "",
+      danmuList: [
+        {
+          text: "\u7B2C 1s \u51FA\u73B0\u7684\u5F39\u5E55",
+          color: "#ff0000",
+          time: 1
+        },
+        {
+          text: "\u7B2C 3s \u51FA\u73B0\u7684\u5F39\u5E55",
+          color: "#ff00ff",
+          time: 3
+        }
+      ],
+      danmuValue: ""
     };
+  },
+  onReady: function(res) {
+    this.videoContext = common_vendor.index.createVideoContext("myVideo");
   },
   onLoad(option) {
     this.tagId = option.tagId;
@@ -44,6 +61,28 @@ const _sfc_main = {
     handleTabItemClick(index) {
       this.current = index;
       console.log(this.current, "current");
+    },
+    sendDanmu: function() {
+      this.videoContext.sendDanmu({
+        text: this.danmuValue,
+        color: this.getRandomColor()
+      });
+      this.danmuValue = "";
+    },
+    videoErrorCallback: function(e) {
+      common_vendor.index.showModal({
+        content: e.target.errMsg,
+        showCancel: false
+      });
+    },
+    getRandomColor: function() {
+      const rgb = [];
+      for (let i = 0; i < 3; ++i) {
+        let color = Math.floor(Math.random() * 256).toString(16);
+        color = color.length == 1 ? "0" + color : color;
+        rgb.push(color);
+      }
+      return "#" + rgb.join("");
     }
   }
 };
@@ -70,7 +109,13 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   } : {}, {
     e: $data.current
-  }, $data.current ? {} : {});
+  }, $data.current ? {
+    f: common_vendor.o((...args) => $options.videoErrorCallback && $options.videoErrorCallback(...args)),
+    g: $data.danmuList,
+    h: $data.danmuValue,
+    i: common_vendor.o(($event) => $data.danmuValue = $event.detail.value),
+    j: common_vendor.o((...args) => $options.sendDanmu && $options.sendDanmu(...args))
+  } : {});
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/pages/detail/detail.vue"]]);
 wx.createPage(MiniProgramPage);
