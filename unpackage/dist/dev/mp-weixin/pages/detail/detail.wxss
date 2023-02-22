@@ -18,6 +18,14 @@
   width: 100vw;
   height: 100vh;
 }
+.uni-input {
+  height: 100rpx;
+}
 #myVideo {
   width: 100%;
+}
+.yongyao {
+  margin-top: 20rpx;
+  width: 100%;
+  border: 2px solid #B0EC64;
 }

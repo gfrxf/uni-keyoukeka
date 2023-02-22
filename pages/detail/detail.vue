@@ -1,14 +1,13 @@
 <template>
 
 
-	<tab-control :titles="['图文科普','视频介绍']" @tabItemClick="handleTabItemClick"></tab-control>
+	<tab-control :titles="['图文科普','视频介绍','用药指南']" @tabItemClick="handleTabItemClick"></tab-control>
 	<mp-html v-if="!current" :content="contentEl"></mp-html>
-	<view class="video" v-if="current">
+	<view class="video" v-if="current === 1">
 		<view class="uni-padding-wrap uni-common-mt">
 			<view>
-				<video id="myVideo"
-					src="https://selfpage-gips.cdn.bcebos.com/selfvideo/9ac8aae7c57a252d2f0e821bcebce056.mp4"
-					@error="videoErrorCallback" :danmu-list="danmuList" enable-danmu danmu-btn controls></video>
+				<video id="myVideo" :src="video" @error="videoErrorCallback" :danmu-list="danmuList" enable-danmu
+					danmu-btn controls></video>
 			</view>
 			<!-- #ifndef MP-ALIPAY -->
 			<view class="uni-list uni-common-mt">
@@ -25,6 +24,19 @@
 				<button @click="sendDanmu" class="page-body-button">发送弹幕</button>
 			</view>
 			<!-- #endif -->
+
+			<view class="yongyao" v-if="current===1">
+
+
+
+
+
+			</view>
+
+
+
+
+
 		</view>
 	</view>
 </template>
@@ -48,17 +60,18 @@
 				current: 0,
 				src: '',
 				danmuList: [{
-						text: '第 1s 出现的弹幕',
-						color: '#ff0000',
+						text: '可有科卡，战胜疾病的过程不孤单',
+						color: '#B0EC64',
 						time: 1
 					},
 					{
-						text: '第 3s 出现的弹幕',
-						color: '#ff00ff',
+						text: '请保持弹幕的友善和合规',
+						color: '#B0EC64',
 						time: 3
 					}
 				],
-				danmuValue: ''
+				danmuValue: '',
+				video: ''
 
 			}
 		},
@@ -84,12 +97,11 @@
 		methods: {
 			async getdetail(id) {
 				const res = await getDetails(id)
-
+				// 反编译后端转移的html
 				this.contentEl = this.htmlUnescape(res.data.content)
-				// this.$forceUpdate()
+				//  视频链接
+				this.video = res.data.video
 
-				// console.log(this.content, 'content');
-				// console.log(typeof this.content, 'type ');
 
 			},
 			htmlUnescape(html) {
@@ -109,10 +121,12 @@
 					}
 				})
 			},
+			// 切换tabs
 			handleTabItemClick(index) {
 				this.current = index
 				console.log(this.current, 'current');
 			},
+			// 视频播放以及弹幕
 			sendDanmu: function() {
 				this.videoContext.sendDanmu({
 					text: this.danmuValue,
@@ -146,7 +160,17 @@
 		height: 100vh;
 	}
 
+	.uni-input {
+		height: 100rpx;
+	}
+
 	#myVideo {
 		width: 100%;
+	}
+
+	.yongyao {
+		margin-top: 20rpx;
+		width: 100%;
+		border: 2px solid #B0EC64;
 	}
 </style>

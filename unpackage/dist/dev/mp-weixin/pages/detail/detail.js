@@ -16,17 +16,18 @@ const _sfc_main = {
       src: "",
       danmuList: [
         {
-          text: "\u7B2C 1s \u51FA\u73B0\u7684\u5F39\u5E55",
-          color: "#ff0000",
+          text: "\u53EF\u6709\u79D1\u5361\uFF0C\u6218\u80DC\u75BE\u75C5\u7684\u8FC7\u7A0B\u4E0D\u5B64\u5355",
+          color: "#B0EC64",
           time: 1
         },
         {
-          text: "\u7B2C 3s \u51FA\u73B0\u7684\u5F39\u5E55",
-          color: "#ff00ff",
+          text: "\u8BF7\u4FDD\u6301\u5F39\u5E55\u7684\u53CB\u5584\u548C\u5408\u89C4",
+          color: "#B0EC64",
           time: 3
         }
       ],
-      danmuValue: ""
+      danmuValue: "",
+      video: ""
     };
   },
   onReady: function(res) {
@@ -43,6 +44,7 @@ const _sfc_main = {
     async getdetail(id) {
       const res = await service_home.getDetails(id);
       this.contentEl = this.htmlUnescape(res.data.content);
+      this.video = res.data.video;
     },
     htmlUnescape(html) {
       return html.replace(/&lt;|&gt;|&quot;|&amp;/g, (match) => {
@@ -100,7 +102,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return common_vendor.e({
     a: common_vendor.o($options.handleTabItemClick),
     b: common_vendor.p({
-      titles: ["\u56FE\u6587\u79D1\u666E", "\u89C6\u9891\u4ECB\u7ECD"]
+      titles: ["\u56FE\u6587\u79D1\u666E", "\u89C6\u9891\u4ECB\u7ECD", "\u7528\u836F\u6307\u5357"]
     }),
     c: !$data.current
   }, !$data.current ? {
@@ -108,14 +110,16 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       content: $data.contentEl
     })
   } : {}, {
-    e: $data.current
-  }, $data.current ? {
-    f: common_vendor.o((...args) => $options.videoErrorCallback && $options.videoErrorCallback(...args)),
-    g: $data.danmuList,
-    h: $data.danmuValue,
-    i: common_vendor.o(($event) => $data.danmuValue = $event.detail.value),
-    j: common_vendor.o((...args) => $options.sendDanmu && $options.sendDanmu(...args))
-  } : {});
+    e: $data.current === 1
+  }, $data.current === 1 ? common_vendor.e({
+    f: $data.video,
+    g: common_vendor.o((...args) => $options.videoErrorCallback && $options.videoErrorCallback(...args)),
+    h: $data.danmuList,
+    i: $data.danmuValue,
+    j: common_vendor.o(($event) => $data.danmuValue = $event.detail.value),
+    k: common_vendor.o((...args) => $options.sendDanmu && $options.sendDanmu(...args)),
+    l: $data.current === 1
+  }, $data.current === 1 ? {} : {}) : {});
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/pages/detail/detail.vue"]]);
 wx.createPage(MiniProgramPage);
