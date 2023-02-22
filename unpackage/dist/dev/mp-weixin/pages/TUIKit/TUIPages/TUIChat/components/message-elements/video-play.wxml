@@ -1,0 +1,1 @@
+<view class="dialog-video data-v-b57b47b7"><video wx:if="{{a}}" class="video-box data-v-b57b47b7" src="{{b}}" id="videoEle" controls autoplay></video></view>

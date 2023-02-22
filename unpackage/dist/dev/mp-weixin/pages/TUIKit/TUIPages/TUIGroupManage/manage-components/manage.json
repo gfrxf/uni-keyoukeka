@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "manage-name": "./manage-name",
+    "manage-notification": "./manage-notification",
+    "manage-member": "./manage-member"
+  }
+}

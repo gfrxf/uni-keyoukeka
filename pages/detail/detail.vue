@@ -1,21 +1,8 @@
 <template>
-	<!-- <view ref="contentEl" class="content">
-		111
-	</view> -->
-	<!-- 	<rich-text ref="conEl" class="content">
-		111111
-	</rich-text> -->
-	<!-- <rich-text>
 
-	</rich-text> -->
-	<!-- <div ref="conEl" class="content"></div> -->
-	<!-- 	<view class="" v-html="content">
 
-	</view> -->
-	<!-- <rich-text :nodes="content"></rich-text> -->
+	<tab-control :titles="['图文科普','视频介绍']"></tab-control>
 	<mp-html :content="contentEl"></mp-html>
-
-
 </template>
 
 
@@ -24,7 +11,11 @@
 	import {
 		getDetails
 	} from '@/service/home.js'
+	import tabcontrol from '@/components/tab-control/tab-control.vue'
 	export default {
+		components: {
+			tabcontrol
+		},
 		data() {
 			return {
 				tagId: 1,

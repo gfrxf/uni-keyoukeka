@@ -1,0 +1,1 @@
+<view class="{{['message-audio', 'data-v-53eee9af', f]}}" bindtap="{{g}}"><image wx:if="{{a}}" class="audio-icon audio-icon-in data-v-53eee9af" src="{{b}}"></image><view class="data-v-53eee9af">{{c}}s</view><image wx:if="{{d}}" class="audio-icon data-v-53eee9af" src="{{e}}"></image></view>

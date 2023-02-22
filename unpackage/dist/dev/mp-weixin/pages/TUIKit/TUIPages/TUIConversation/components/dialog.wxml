@@ -1,0 +1,1 @@
+<view wx:if="{{a}}" class="dialog data-v-842d67a9" bindtap="{{c}}"><view class="dialog-container data-v-842d67a9" style="{{b}}"><slot/></view></view>

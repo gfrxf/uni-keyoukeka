@@ -1,0 +1,1 @@
+<view class="message-image data-v-d71110be" bindtap="{{e}}"><image src="{{a}}" style="{{'height:' + b + ';' + ('width:' + c)}}" class="{{['data-v-d71110be', d]}}"></image></view>

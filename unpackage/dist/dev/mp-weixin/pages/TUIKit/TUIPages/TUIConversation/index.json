@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-u-i-conversation-list": "./conversation-list",
+    "dialog": "./components/dialog"
+  }
+}

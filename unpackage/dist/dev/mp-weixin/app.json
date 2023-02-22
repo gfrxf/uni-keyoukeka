@@ -5,7 +5,16 @@
     "pages/social/social",
     "pages/profile/profile",
     "pages/detail/detail",
-    "pages/add/add"
+    "pages/add/add",
+    "pages/TUIKit/TUIPages/TUILogin/index",
+    "pages/TUIKit/TUIPages/TUIConversation/index",
+    "pages/TUIKit/TUIPages/TUIConversation/create",
+    "pages/TUIKit/TUIPages/TUIChat/index",
+    "pages/TUIKit/TUIPages/TUIMine/index",
+    "pages/TUIKit/TUIPages/TUIChat/components/message-elements/video-play",
+    "pages/TUIKit/TUIPages/TUIGroupManage/index",
+    "pages/TUIKit/TUIPages/TUIUserCenter/webview/webview",
+    "pages/TUIKit/TUIPages/TUIGroupManage/memberOperate"
   ],
   "window": {
     "navigationBarTextStyle": "white",

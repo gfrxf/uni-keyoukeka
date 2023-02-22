@@ -282,5 +282,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     C: $data.aniMaskShow ? 1 : ""
   }) : {});
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-b6ab2cfb"], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukeka/uni_modules/uni-calendar/components/uni-calendar/uni-calendar.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-b6ab2cfb"], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/uni_modules/uni-calendar/components/uni-calendar/uni-calendar.vue"]]);
 wx.createComponent(Component);

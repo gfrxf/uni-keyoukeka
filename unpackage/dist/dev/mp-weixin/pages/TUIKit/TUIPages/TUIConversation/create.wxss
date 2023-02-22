@@ -1,0 +1,149 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 水平间距 */
+/* 水平间距 */
+/* 颜色变量 */
+/* 行为相关颜色 */
+.TUI-Create-conversation-container.data-v-d9bc6912 {
+  width: 100%;
+  height: 100%;
+  background-color: #F4F5F9;
+  overflow: hidden;
+}
+.tui-search-area.data-v-d9bc6912 {
+  position: fixed;
+  width: 750rpx;
+  background-color: #EBF0F6;
+  z-index: 100;
+}
+.tui-showID.data-v-d9bc6912 {
+  padding-left: 80rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: black;
+  height: 50rpx;
+  padding-top: 8rpx;
+}
+.tui-search-bar.data-v-d9bc6912 {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-left: 40rpx;
+  margin-top: 32rpx;
+  width: 670rpx;
+  height: 80rpx;
+  background: #FFFFFF;
+  border-radius: 40rpx;
+  border-radius: 40rpx;
+}
+.tui-searchcion.data-v-d9bc6912 {
+  display: inline-block;
+  margin-left: 24rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+.tui-search-bar-input.data-v-d9bc6912 {
+  line-height: 40rpx;
+  font-size: 28rpx;
+  padding: 0 36rpx;
+  width: 100%;
+  display: inline-block;
+}
+.tui-person-list-container.data-v-d9bc6912 {
+  position: absolute;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 150rpx; */
+  background-color: #FFFFFF;
+  padding-left: 16px;
+  align-items: center;
+  overflow: auto;
+  padding-bottom: 100rpx;
+}
+.tui-person-to-invite.data-v-d9bc6912 {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 750rpx;
+  height: 150rpx;
+  background-color: #FFFFFF;
+  padding-left: 16px;
+  align-items: center;
+  border-bottom: 1rpx solid #DBDBDB;
+}
+.tui-person-to-invite.data-v-d9bc6912:last-child {
+  border-bottom: 0rpx solid #DBDBDB;
+}
+.tui-person-choose-container.data-v-d9bc6912 {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin-right: 17px;
+}
+.tui-normal-unchoose.data-v-d9bc6912 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #DDDDDD;
+}
+.tui-normal-choose.data-v-d9bc6912 {
+  width: 100%;
+  height: 100%;
+}
+.tui-person-profile.data-v-d9bc6912 {
+  width: 622rpx;
+  display: flex;
+  align-items: center;
+}
+.tui-person-profile-avatar.data-v-d9bc6912 {
+  width: 96rpx;
+  height: 96rpx;
+  margin-right: 24rpx;
+  border-radius: 10rpx;
+}
+.tui-person-profile-nick.data-v-d9bc6912 {
+  color: #333333;
+  line-height: 50rpx;
+  font-size: 36rpx;
+  margin-bottom: 4rpx;
+}
+.tui-person-profile-userID.data-v-d9bc6912 {
+  color: #999999;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+.tui-confirm-btn-container.data-v-d9bc6912 {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0rpx;
+  width: 100%;
+  height: 96rpx;
+  background-color: #FFFFFF;
+  line-height: 44rpx;
+  font-size: 32rpx;
+}
+.tui-confirm-btn-container .tui-confirm-btn.data-v-d9bc6912 {
+  width: 670rpx;
+  height: 42px;
+  background: #006EFF;
+  color: #FFFFFF;
+  border-radius: 42rpx;
+  line-height: 44rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,190 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 水平间距 */
+/* 水平间距 */
+/* 颜色变量 */
+/* 行为相关颜色 */
+.manage.data-v-74555746 {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-sizing: border-box;
+  overflow-y: auto;
+  box-shadow: 0 1px 10px 0 rgba(2, 16, 43, 0.15);
+  border-radius: 8px 0 0 8px;
+  right: 0;
+  height: calc(100% - 40px);
+  z-index: 2;
+  top: 40px;
+}
+.manage .text-ellipsis.data-v-74555746 {
+  text-align: center;
+  max-width: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.manage .notification.data-v-74555746 {
+  opacity: 0.6;
+  width: 246px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.manage .item-li.data-v-74555746 {
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+.manage .footer.data-v-74555746 {
+  padding: 0 20px;
+}
+.manage .footer .group-btn.data-v-74555746 {
+  cursor: pointer;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  color: #dc2113;
+  padding: 14px 0;
+  text-align: center;
+  border-bottom: 1px solid #e8e8e9;
+}
+.manage .footer .group-btn.data-v-74555746:last-child {
+  border: none;
+}
+.manage-header.data-v-74555746 {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e9;
+}
+.manage-header h1.data-v-74555746 {
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+.manage-header-left.data-v-74555746 {
+  display: flex;
+}
+.manage-header-left .icon.data-v-74555746 {
+  margin-right: 14px;
+}
+.manage-header-left main.data-v-74555746 {
+  display: flex;
+  flex-direction: column;
+}
+.manage .main .userInfo.data-v-74555746 {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.manage .main .userInfo-header.data-v-74555746 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+.manage .main .userInfo.data-v-74555746:last-child {
+  padding-right: 0;
+}
+.manage .main .userInfo .more.data-v-74555746 {
+  padding-top: 10px;
+}
+.manage .main .userInfo .userInfo-mask.data-v-74555746 {
+  position: absolute;
+  z-index: 5;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.3);
+  left: 100%;
+}
+.manage .content.data-v-74555746 {
+  padding: 0 20px;
+}
+.manage .admin.data-v-74555746 {
+  padding: 20px 0;
+}
+.manage .admin-content.data-v-74555746 {
+  padding: 20px 20px 12px;
+  display: flex;
+  align-items: center;
+}
+.manage .admin-list.data-v-74555746 {
+  padding: 0 20px;
+}
+.manage .admin-list label.data-v-74555746 {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  padding-bottom: 8px;
+}
+.manage .admin .last.data-v-74555746 {
+  padding-top: 13px;
+  position: relative;
+}
+.manage .admin .last.data-v-74555746::before {
+  position: absolute;
+  content: "";
+  width: calc(100% - 40px);
+  height: 1px;
+  background: #e8e8e9;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.manage .image-right.data-v-74555746 {
+  width: 18px;
+  height: 20px;
+}
+.manage .avatar.data-v-74555746 {
+  width: 36px;
+  height: 36px;
+  background: #f4f5f9;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.manage .space-top.data-v-74555746 {
+  border-top: 10px solid #f4f5f9;
+}
+.manage .slider-box.data-v-74555746 {
+  display: flex;
+  align-items: center;
+  width: 34px;
+  height: 20px;
+  border-radius: 10px;
+  background: #e1e1e3;
+}
+.manage .slider-block.data-v-74555746 {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  margin: 0 2px;
+  background: #ffffff;
+  border: 0 solid rgba(0, 0, 0, 0.85);
+  box-shadow: 0 2px 4px 0 #d1d1d1;
+}
+.manage .space-between.data-v-74555746 {
+  justify-content: space-between;
+}

@@ -1,0 +1,123 @@
+
+.contain {
+  width: 100%;
+  height: 100vh;
+  background: #f6f8fa;
+  position: relative;
+}
+.mine-top {
+  height: 358rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
+.view-image-text {
+  display: flex;
+  width: 100%;
+  height: 189rpx;
+  justify-content: left;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.image-radius {
+  padding-left: 43rpx;
+  padding-top: 43rpx;
+  padding-bottom: 40rpx;
+  height: 120rpx;
+  width: 120rpx;
+}
+.name {
+  height: 25px;
+  font-family: PingFangSC-Medium;
+  font-size: 18px;
+  color: #333333;
+  letter-spacing: 0;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.ID {
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #666666;
+  letter-spacing: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding-bottom: 40rpx;
+}
+.quit-main {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  height: 112rpx;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: #FFFFFF;
+}
+.quit-main-text {
+  display: flex;
+  justify-content: center;
+  font-family: PingFangSC-Regular;
+  font-size: 34rpx;
+  color: #FF584C;
+  letter-spacing: 0;
+}
+.arrow {
+  width: 16px;
+  height: 16px;
+  float: right;
+}
+.pop-mask {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+
+
+
+
+  right: 0;
+  background: rgba(0, 0, 0, 0.60);
+  display: flex;
+  align-items: center;
+}
+.pop-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20rpx;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #EEF0F3;
+  z-index: 1;
+}
+.text-title {
+  right: 100px;
+  left: 100px;
+}
+.pop-box-text {
+  display: flex;
+  padding-top: 10px;
+  font-family: PingFangSC-Regular;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.agree {
+  padding-top: 20rpx;
+}
+.pop-agree {
+  padding-top: 20rpx;
+  background: rgba(0, 110, 255, 1);
+  border-radius: 30px;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  /* text-align: center; */
+  font-weight: 500;
+}

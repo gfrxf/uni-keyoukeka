@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "云通信 IM",
+  "usingComponents": {
+    "message-bubble": "./components/message-elements/message-bubble",
+    "message-text": "./components/message-elements/message-text",
+    "message-image": "./components/message-elements/message-image",
+    "message-operate": "./components/message-elements/message-operate",
+    "message-video": "./components/message-elements/message-video",
+    "message-audio": "./components/message-elements/message-audio",
+    "message-face": "./components/message-elements/message-face",
+    "message-custom": "./components/message-elements/message-custom",
+    "message-tip": "./components/message-elements/message-tip",
+    "message-revoked": "./components/message-elements/message-revoked",
+    "message-system": "./components/message-elements/message-system",
+    "t-u-i-chat-input": "./components/message-input/index"
+  }
+}

@@ -270,5 +270,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     aa: common_vendor.o((...args) => $options.handleEnd && $options.handleEnd(...args))
   });
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-face3f74"], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukeka/components/firstui/fui-button/fui-button.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__scopeId", "data-v-face3f74"], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/components/firstui/fui-button/fui-button.vue"]]);
 wx.createComponent(Component);

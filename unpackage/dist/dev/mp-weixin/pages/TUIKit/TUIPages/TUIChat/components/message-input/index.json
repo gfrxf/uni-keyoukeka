@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "face": "./message/face",
+    "audio-message": "./message/audio"
+  }
+}

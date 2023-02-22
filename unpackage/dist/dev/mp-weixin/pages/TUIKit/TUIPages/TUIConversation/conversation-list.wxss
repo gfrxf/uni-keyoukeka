@@ -1,0 +1,195 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 水平间距 */
+/* 水平间距 */
+/* 颜色变量 */
+/* 行为相关颜色 */
+.TUI-conversation.data-v-9a62e141 {
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.TUI-conversation-list.data-v-9a62e141 {
+  list-style: none;
+}
+.TUI-conversation-item.data-v-9a62e141 {
+  position: relative;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+}
+.TUI-conversation-item .left.data-v-9a62e141 {
+  position: relative;
+}
+.TUI-conversation-item .left .num.data-v-9a62e141 {
+  font-family: PingFangSC-Regular;
+  position: absolute;
+  display: inline-block;
+  right: -8px;
+  top: -8px;
+  background: red;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.TUI-conversation-item .left .num-notNotify.data-v-9a62e141 {
+  position: absolute;
+  display: inline-block;
+  right: -4px;
+  top: -4px;
+  background: red;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+.TUI-conversation-item .left .avatar.data-v-9a62e141 {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+.TUI-conversation-item .content.data-v-9a62e141 {
+  flex: 1;
+  padding-left: 10px;
+  position: relative;
+}
+.TUI-conversation-item .content p.data-v-9a62e141 {
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+  letter-spacing: 0;
+  line-height: 19px;
+  font-family: PingFangSC-Regular;
+}
+.TUI-conversation-item .content .conversation-line.data-v-9a62e141 {
+  position: absolute;
+  display: block;
+  left: 0;
+  right: -12px;
+  height: 0.5px;
+  transform: scaleY(0.3);
+  background: #B0B0B0;
+  /* padding-top: 10px; */
+  bottom: -15px;
+}
+.TUI-conversation-item .content .name.data-v-9a62e141 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0;
+  margin-bottom: 5px;
+  font-family: PingFangSC-Regular;
+}
+.TUI-conversation-item .content-header.data-v-9a62e141 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.TUI-conversation-item .content-header label.data-v-9a62e141 {
+  flex: 1;
+  font-size: 14px;
+  color: #000000;
+}
+.TUI-conversation-item .content-header label .name.data-v-9a62e141 {
+  width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.TUI-conversation-item .content-header .time.data-v-9a62e141 {
+  font-size: 12px;
+  color: #B0B0B0;
+  line-height: 16px;
+  display: inline-block;
+  max-width: 75px;
+  font-weight: 400;
+}
+.TUI-conversation-item .content-footer.data-v-9a62e141 {
+  color: #999999;
+  line-height: 16px;
+  display: flex;
+}
+.TUI-conversation-item .content-footer .message-text.data-v-9a62e141 {
+  margin-left: 4px;
+  display: block;
+  width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.TUI-conversation-item .content .item-footer.data-v-9a62e141 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.TUI-conversation-item .content .item-footer .time.data-v-9a62e141 {
+  font-size: 12px;
+  color: #B0B0B0;
+  line-height: 16px;
+  display: inline-block;
+  max-width: 75px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.TUI-conversation-item .content .item-footer .mute-icon.data-v-9a62e141 {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.TUI-conversation-item .dialog-box.data-v-9a62e141 {
+  position: absolute;
+  z-index: 5;
+  background: #fff;
+  border: 1px solid #dddddd;
+  padding: 15px 20px;
+  right: 15px;
+  top: 30px;
+}
+.TUI-conversation-item .dialog-box-item.data-v-9a62e141 {
+  top: 60px;
+  right: 40px;
+  box-shadow: 0 11px 20px 0 rgba(0, 0, 0, 0.3);
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 -4px 12px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
+.TUI-conversation-item .dialog-box .conversation-options.data-v-9a62e141 {
+  height: 35px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  font-size: 14px;
+  color: #4F4F4F;
+  letter-spacing: 0;
+  line-height: 35px;
+}
+.selected.data-v-9a62e141 {
+  background: #EDF0F5;
+}
+.pinned.data-v-9a62e141 {
+  background: #EEF0F3;
+}

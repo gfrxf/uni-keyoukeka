@@ -76,11 +76,11 @@ const _sfc_main = {
         g: common_vendor.f(common_vendor.unref(mydata), (itemInfo, index, i0) => {
           return {
             a: common_vendor.o(handleGridItemClick, index),
-            b: "0bd640e0-9-" + i0 + "," + ("0bd640e0-8-" + i0),
+            b: "9e1124bc-9-" + i0 + "," + ("9e1124bc-8-" + i0),
             c: common_vendor.p({
               itemInfo
             }),
-            d: "0bd640e0-8-" + i0 + ",0bd640e0-7",
+            d: "9e1124bc-8-" + i0 + ",9e1124bc-7",
             e: index
           };
         }),
@@ -95,11 +95,11 @@ const _sfc_main = {
         j: common_vendor.f(common_vendor.unref(alldata), (itemInfo, index, i0) => {
           return {
             a: common_vendor.o(handleGridItemClick, index),
-            b: "0bd640e0-12-" + i0 + "," + ("0bd640e0-11-" + i0),
+            b: "9e1124bc-12-" + i0 + "," + ("9e1124bc-11-" + i0),
             c: common_vendor.p({
               itemInfo
             }),
-            d: "0bd640e0-11-" + i0 + ",0bd640e0-10",
+            d: "9e1124bc-11-" + i0 + ",9e1124bc-10",
             e: index
           };
         }),
@@ -112,5 +112,5 @@ const _sfc_main = {
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukeka/pages/home/home.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/pages/home/home.vue"]]);
 wx.createPage(MiniProgramPage);

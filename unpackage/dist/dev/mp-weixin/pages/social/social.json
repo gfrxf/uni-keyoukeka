@@ -1,4 +1,7 @@
 {
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "fui-input": "../../components/firstui/fui-input/fui-input",
+    "fui-button": "../../node-modules/firstui-uni/firstui/fui-button/fui-button"
+  }
 }

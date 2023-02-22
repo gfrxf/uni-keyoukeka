@@ -12,6 +12,7 @@ const _sfc_main = {
     const nickName = common_vendor.ref("");
     const avatarUrl = common_vendor.ref("");
     const openid = common_vendor.ref("");
+    const chatName = common_vendor.ref("");
     avatarUrl.value = common_assets.touxiang;
     common_vendor.onBeforeMount(() => {
       console.log("onmountes");
@@ -25,6 +26,7 @@ const _sfc_main = {
     });
     async function handleClick() {
       const res = await service_profile.getUserInfo();
+      console.log(res);
       const userInfo = res.userInfo;
       const rawData = res.rawData;
       const signature = res.signature;
@@ -34,13 +36,15 @@ const _sfc_main = {
       if (resm.success === true) {
         avatarUrl.value = userInfo.avatarUrl;
         nickName.value = userInfo.nickName;
-        openid.value = resm.data;
+        openid.value = resm.data.openId;
+        chatName.value = resm.data.chatName;
         profileStore.setnickName(nickName.value);
         profileStore.setavatarUrl(avatarUrl.value);
         profileStore.setopenid(openid.value);
         common_vendor.index.setStorageSync("openid", openid.value);
         common_vendor.index.setStorageSync("avatarUrl", avatarUrl.value);
         common_vendor.index.setStorageSync("nickName", nickName.value);
+        common_vendor.index.setStorageSync("chatName", chatName.value);
         isLogin.value = true;
         common_vendor.index.showToast({
           title: "\u767B\u5F55\u6210\u529F",
@@ -69,5 +73,5 @@ const _sfc_main = {
     };
   }
 };
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukeka/pages/profile/cpns/user-info.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/pages/profile/cpns/user-info.vue"]]);
 wx.createComponent(Component);

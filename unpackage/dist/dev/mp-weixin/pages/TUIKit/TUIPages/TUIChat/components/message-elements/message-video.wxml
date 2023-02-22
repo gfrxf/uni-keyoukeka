@@ -1,0 +1,1 @@
+<view class="message-video data-v-0e400482"><view class="{{['message-video-box', 'data-v-0e400482', d]}}" bindtap="{{e}}"><image src="{{a}}" class="{{['message-video-box', 'data-v-0e400482', b]}}"></image><image src="{{c}}" class="video-play data-v-0e400482"></image></view></view>

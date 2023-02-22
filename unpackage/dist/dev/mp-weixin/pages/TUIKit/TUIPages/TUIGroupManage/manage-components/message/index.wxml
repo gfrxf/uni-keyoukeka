@@ -1,0 +1,1 @@
+<transition wx:if="{{f}}" class="data-v-8cf5b8e6" u-s="{{['d']}}" bindbeforeLeave="{{d}}" bindafterLeave="{{e}}" u-i="8cf5b8e6-0" bind:__l="__l" u-p="{{f}}"><view class="message data-v-8cf5b8e6" style="{{b}}" hidden="{{!c}}"><view class="data-v-8cf5b8e6">{{a}}</view></view></transition>

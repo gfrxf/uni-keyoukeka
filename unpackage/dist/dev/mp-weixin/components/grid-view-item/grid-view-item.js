@@ -20,12 +20,12 @@ const _sfc_main = {
       return {
         a: __props.itemInfo.img,
         b: common_vendor.t(__props.itemInfo.title),
-        c: common_assets._imports_0,
+        c: common_assets._imports_0$3,
         d: common_vendor.t(__props.itemInfo.collectTimes),
         e: common_vendor.o(handleItemClick)
       };
     };
   }
 };
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukeka/components/grid-view-item/grid-view-item.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/components/grid-view-item/grid-view-item.vue"]]);
 wx.createComponent(Component);

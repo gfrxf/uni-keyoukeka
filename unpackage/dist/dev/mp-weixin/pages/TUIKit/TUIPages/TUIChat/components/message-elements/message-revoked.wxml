@@ -1,0 +1,1 @@
+<view class="revoke data-v-74cb0d08"><label wx:if="{{a}}" class="data-v-74cb0d08">{{b}}</label><label wx:else class="data-v-74cb0d08">你</label><label class="data-v-74cb0d08">撤回了一条消息</label><label wx:if="{{c}}" class="edit data-v-74cb0d08" bindtap="{{d}}">重新编辑</label></view>

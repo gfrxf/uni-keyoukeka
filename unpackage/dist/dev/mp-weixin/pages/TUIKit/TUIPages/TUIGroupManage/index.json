@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "群管理",
+  "usingComponents": {
+    "t-u-i-group-manage": "./manage-components/manage"
+  }
+}

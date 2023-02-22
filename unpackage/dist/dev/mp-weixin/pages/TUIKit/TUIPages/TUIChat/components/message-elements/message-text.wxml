@@ -1,0 +1,1 @@
+<view class="{{['data-v-8469577b', b]}}"><view wx:for="{{a}}" wx:for-item="item" wx:key="e" class="data-v-8469577b"><view wx:if="{{item.a}}" class="data-v-8469577b">{{item.b}}</view><image wx:elif="{{item.c}}" class="text-img data-v-8469577b" src="{{item.d}}"/></view></view>

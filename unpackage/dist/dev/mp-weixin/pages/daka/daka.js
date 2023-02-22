@@ -84,7 +84,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     a: common_vendor.p({
       rank: $data.rank
     }),
-    b: common_vendor.sr("calendar", "51a49010-1"),
+    b: common_vendor.sr("calendar", "08871e22-1"),
     c: common_vendor.o($options.confirm),
     d: common_vendor.p({
       insert: false,
@@ -96,15 +96,15 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     f: common_vendor.f($data.checkboxItems, (item, index, i0) => {
       return {
         a: common_vendor.t(item.clockTypeDetail),
-        b: "51a49010-5-" + i0 + "," + ("51a49010-4-" + i0),
+        b: "08871e22-5-" + i0 + "," + ("08871e22-4-" + i0),
         c: common_vendor.p({
           checked: item.checked,
           color: "#B0EC64",
           value: item.clockTypeId
         }),
-        d: "51a49010-4-" + i0 + "," + ("51a49010-3-" + i0),
+        d: "08871e22-4-" + i0 + "," + ("08871e22-3-" + i0),
         e: index,
-        f: "51a49010-3-" + i0 + ",51a49010-2"
+        f: "08871e22-3-" + i0 + ",08871e22-2"
       };
     }),
     g: common_vendor.o($options.handleClick),
@@ -115,5 +115,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   };
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukeka/pages/daka/daka.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/pages/daka/daka.vue"]]);
 wx.createPage(MiniProgramPage);
