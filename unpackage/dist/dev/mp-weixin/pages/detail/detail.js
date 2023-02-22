@@ -11,7 +11,8 @@ const _sfc_main = {
     return {
       tagId: 1,
       contentEl: "",
-      test: "<div>Hello World!</div>"
+      test: "<div>Hello World!</div>",
+      current: 0
     };
   },
   onLoad(option) {
@@ -39,6 +40,10 @@ const _sfc_main = {
             return "&";
         }
       });
+    },
+    handleTabItemClick(index) {
+      this.current = index;
+      console.log(this.current, "current");
     }
   }
 };
@@ -53,14 +58,19 @@ if (!Math) {
   (_easycom_tab_control + _easycom_mp_html)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return {
-    a: common_vendor.p({
+  return common_vendor.e({
+    a: common_vendor.o($options.handleTabItemClick),
+    b: common_vendor.p({
       titles: ["\u56FE\u6587\u79D1\u666E", "\u89C6\u9891\u4ECB\u7ECD"]
     }),
-    b: common_vendor.p({
+    c: !$data.current
+  }, !$data.current ? {
+    d: common_vendor.p({
       content: $data.contentEl
     })
-  };
+  } : {}, {
+    e: $data.current
+  }, $data.current ? {} : {});
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/pages/detail/detail.vue"]]);
 wx.createPage(MiniProgramPage);

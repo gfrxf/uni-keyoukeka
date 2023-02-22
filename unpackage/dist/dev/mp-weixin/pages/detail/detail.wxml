@@ -1,1 +1,1 @@
-<tab-control wx:if="{{a}}" u-i="d215303c-0" bind:__l="__l" u-p="{{a}}"></tab-control><mp-html wx:if="{{b}}" u-i="d215303c-1" bind:__l="__l" u-p="{{b}}"></mp-html>
+<tab-control wx:if="{{b}}" bindtabItemClick="{{a}}" u-i="d215303c-0" bind:__l="__l" u-p="{{b}}"></tab-control><mp-html wx:if="{{c}}" u-i="d215303c-1" bind:__l="__l" u-p="{{d}}"></mp-html><view wx:if="{{e}}" class="video"></view>

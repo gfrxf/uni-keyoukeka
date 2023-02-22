@@ -1,8 +1,11 @@
 <template>
 
 
-	<tab-control :titles="['图文科普','视频介绍']"></tab-control>
-	<mp-html :content="contentEl"></mp-html>
+	<tab-control :titles="['图文科普','视频介绍']" @tabItemClick="handleTabItemClick"></tab-control>
+	<mp-html v-if="!current" :content="contentEl"></mp-html>
+	<view class="video" v-if="current">
+
+	</view>
 </template>
 
 
@@ -20,16 +23,11 @@
 			return {
 				tagId: 1,
 				contentEl: '',
-				test: '<div>Hello World!</div>'
+				test: '<div>Hello World!</div>',
+				current: 0
 			}
 		},
-		// props: {
-		// 	tagId: {
-		// 		type: String,
-		// 		default: '',
 
-		// 	}
-		// },
 		onLoad(option) {
 
 			this.tagId = option.tagId
@@ -70,6 +68,10 @@
 
 					}
 				})
+			},
+			handleTabItemClick(index) {
+				this.current = index
+				console.log(this.current, 'current');
 			}
 
 		}
