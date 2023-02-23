@@ -60,12 +60,12 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return common_vendor.e({
     a: _ctx.message.flow === "in"
   }, _ctx.message.flow === "in" ? {
-    b: common_assets._imports_0$9
+    b: common_assets._imports_0$8
   } : {}, {
     c: common_vendor.t(_ctx.data.second),
     d: _ctx.message.flow === "out"
   }, _ctx.message.flow === "out" ? {
-    e: common_assets._imports_0$9
+    e: common_assets._imports_0$8
   } : {}, {
     f: common_vendor.n("content content-" + _ctx.message.flow),
     g: common_vendor.o((...args) => _ctx.handlePlay && _ctx.handlePlay(...args))

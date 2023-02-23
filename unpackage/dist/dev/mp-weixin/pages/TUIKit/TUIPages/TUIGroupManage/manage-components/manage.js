@@ -302,7 +302,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     e: common_vendor.t(_ctx.\u7FA4\u6210\u5458),
     f: common_vendor.t(_ctx.conversation.groupProfile.memberCount),
-    g: common_assets._imports_0$11,
+    g: common_assets._imports_0$10,
     h: common_vendor.o(($event) => _ctx.setTab("member")),
     i: common_vendor.f((_b = (_a = _ctx.userInfo) == null ? void 0 : _a.list) == null ? void 0 : _b.slice(0, _ctx.showUserNum), (item, index, i0) => {
       return {
@@ -321,7 +321,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   } : {}, {
     n: _ctx.isAdmin
   }, _ctx.isAdmin ? {
-    o: common_assets._imports_0$11,
+    o: common_assets._imports_0$10,
     p: common_vendor.o(($event) => _ctx.setTab("admin"))
   } : {}, {
     q: common_vendor.t(_ctx.conversation.groupProfile.groupID),

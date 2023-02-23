@@ -52,7 +52,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     d: common_vendor.o(($event) => _ctx.input = $event.detail.value)
   } : {
     e: common_vendor.t(_ctx.groupProfile.name),
-    f: common_assets._imports_0$12,
+    f: common_assets._imports_0$11,
     g: common_vendor.o(($event) => _ctx.isEdit = !_ctx.isEdit)
   });
 }

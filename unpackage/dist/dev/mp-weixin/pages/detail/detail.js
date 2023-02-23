@@ -27,7 +27,8 @@ const _sfc_main = {
         }
       ],
       danmuValue: "",
-      video: ""
+      video: "",
+      medicinePoint: ""
     };
   },
   onReady: function(res) {
@@ -45,6 +46,7 @@ const _sfc_main = {
       const res = await service_home.getDetails(id);
       this.contentEl = this.htmlUnescape(res.data.content);
       this.video = res.data.video;
+      this.medicinePoint = this.htmlUnescape(res.data.medicinePoint);
     },
     htmlUnescape(html) {
       return html.replace(/&lt;|&gt;|&quot;|&amp;/g, (match) => {
@@ -111,15 +113,20 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   } : {}, {
     e: $data.current === 1
-  }, $data.current === 1 ? common_vendor.e({
+  }, $data.current === 1 ? {
     f: $data.video,
     g: common_vendor.o((...args) => $options.videoErrorCallback && $options.videoErrorCallback(...args)),
     h: $data.danmuList,
     i: $data.danmuValue,
     j: common_vendor.o(($event) => $data.danmuValue = $event.detail.value),
-    k: common_vendor.o((...args) => $options.sendDanmu && $options.sendDanmu(...args)),
-    l: $data.current === 1
-  }, $data.current === 1 ? {} : {}) : {});
+    k: common_vendor.o((...args) => $options.sendDanmu && $options.sendDanmu(...args))
+  } : {}, {
+    l: $data.current === 2
+  }, $data.current === 2 ? {
+    m: common_vendor.p({
+      content: $data.medicinePoint
+    })
+  } : {});
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/xiongfeng/Desktop/\u53EF\u6709\u79D1\u5361/keyoukekatest/pages/detail/detail.vue"]]);
 wx.createPage(MiniProgramPage);

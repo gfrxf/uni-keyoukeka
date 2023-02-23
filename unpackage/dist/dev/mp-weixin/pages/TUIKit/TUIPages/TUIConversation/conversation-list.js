@@ -201,7 +201,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         i: common_vendor.t(_ctx.handleItemTime(item.lastMessage.lastTime)),
         j: item.messageRemindType === "AcceptNotNotify"
       }, item.messageRemindType === "AcceptNotNotify" ? {
-        k: common_assets._imports_0$6
+        k: common_assets._imports_0$5
       } : {}, {
         l: item.conversationID === _ctx.dialogID
       }, item.conversationID === _ctx.dialogID ? common_vendor.e({

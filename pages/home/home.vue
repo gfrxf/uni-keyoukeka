@@ -7,16 +7,21 @@
 		<!-- 四个图片展示 -->
 		<uni-grid :column="2">
 			<uni-grid-item>
-				<image src="../../static/images/home/img1.png" mode="heightFix"></image>
+				<image src="https://yun.duiba.com.cn/polaris/img1.3be6dd0556f76409e803ce90d65cc9af13246f37.png"
+					mode="heightFix"></image>
 			</uni-grid-item>
 			<uni-grid-item>
-				<image src="../../static/images/home/img10.png" mode="heightFix"></image>
+				<image src="https://yun.duiba.com.cn/polaris/img10.0a0407682cb30ac3bc96839e9709b04f013a9492.png"
+					mode="heightFix"></image>
 			</uni-grid-item>
 			<uni-grid-item>
-				<image src="../../static/images/home/img7.png" mode="heightFix"></image>
+				<image src="https://yun.duiba.com.cn/polaris/img7.035ced1497405bcb4fa1d7d860f528498de5a725.png"
+					mode="heightFix"></image>
 			</uni-grid-item>
 			<uni-grid-item>
-				<image class="img4" src="../../static/images/home/img4.png" mode="heightFix"></image>
+				<image class="img4"
+					src="https://yun.duiba.com.cn/polaris/img4.229e3aee29e7fc1ee4821ad93b7e735431cecd10.png"
+					mode="heightFix"></image>
 			</uni-grid-item>
 		</uni-grid>
 

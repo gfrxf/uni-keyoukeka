@@ -123,7 +123,7 @@ if (!Array) {
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return common_vendor.e({
     a: common_vendor.o((...args) => _ctx.handleSwitchAudio && _ctx.handleSwitchAudio(...args)),
-    b: common_assets._imports_0$10,
+    b: common_assets._imports_0$9,
     c: !_ctx.isAudio
   }, !_ctx.isAudio ? {
     d: common_vendor.o((...args) => _ctx.handleSendTextMessage && _ctx.handleSendTextMessage(...args)),
@@ -131,8 +131,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     f: common_vendor.o(($event) => _ctx.inputText = $event.detail.value)
   } : {}, {
     g: common_vendor.o((...args) => _ctx.handleEmoji && _ctx.handleEmoji(...args)),
-    h: common_assets._imports_1$5,
-    i: common_assets._imports_2$3,
+    h: common_assets._imports_1$4,
+    i: common_assets._imports_2$2,
     j: common_vendor.o((...args) => _ctx.handleExtensions && _ctx.handleExtensions(...args)),
     k: _ctx.displayFlag === "emoji"
   }, _ctx.displayFlag === "emoji" ? {

@@ -4,12 +4,13 @@
 	<tab-control :titles="['图文科普','视频介绍','用药指南']" @tabItemClick="handleTabItemClick"></tab-control>
 	<mp-html v-if="!current" :content="contentEl"></mp-html>
 	<view class="video" v-if="current === 1">
+
 		<view class="uni-padding-wrap uni-common-mt">
 			<view>
 				<video id="myVideo" :src="video" @error="videoErrorCallback" :danmu-list="danmuList" enable-danmu
 					danmu-btn controls></video>
 			</view>
-			<!-- #ifndef MP-ALIPAY -->
+
 			<view class="uni-list uni-common-mt">
 				<view class="uni-list-cell">
 					<!-- <view>
@@ -23,22 +24,18 @@
 			<view class="uni-btn-v">
 				<button @click="sendDanmu" class="page-body-button">发送弹幕</button>
 			</view>
-			<!-- #endif -->
-
-			<view class="yongyao" v-if="current===1">
-
-
-
-
-
-			</view>
-
-
-
-
-
 		</view>
 	</view>
+
+	<view class="yongyao" v-if="current===2">
+
+		<mp-html :content="medicinePoint"></mp-html>
+
+
+
+	</view>
+
+
 </template>
 
 
@@ -71,7 +68,8 @@
 					}
 				],
 				danmuValue: '',
-				video: ''
+				video: '',
+				medicinePoint: ''
 
 			}
 		},
@@ -101,6 +99,8 @@
 				this.contentEl = this.htmlUnescape(res.data.content)
 				//  视频链接
 				this.video = res.data.video
+				// 用药指南
+				this.medicinePoint = this.htmlUnescape(res.data.medicinePoint)
 
 
 			},

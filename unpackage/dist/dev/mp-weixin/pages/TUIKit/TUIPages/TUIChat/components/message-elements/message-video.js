@@ -42,7 +42,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: _ctx.video.snapshotUrl,
     b: common_vendor.n("content-" + _ctx.message.flow),
-    c: common_assets._imports_0$8,
+    c: common_assets._imports_0$7,
     d: common_vendor.n(!_ctx.video.progress && "message-video-cover"),
     e: common_vendor.o((...args) => _ctx.toggleShow && _ctx.toggleShow(...args))
   };
